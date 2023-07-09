@@ -1,0 +1,3 @@
+Course name: Bash Scripting and Shell Programming (Linux Command Line)
+
+Course URL: https://carpedata.udemy.com/course/bash-scripting

@@ -1,3 +1,5 @@
+# 1 - Shell Scripting in a Nutshell
+
 ## Executing the script
 
 ### Set the interperter
@@ -92,4 +94,65 @@ fi
 
 ### For loop
 
+- Syntax:  
+```
+for VARIABLE_NAME in ITEM_1 ITEM_N
+do
+    command 1
+    command 2
+    command N
+done
+```
 
+- Eg:  
+
+```
+#!/bin/bash
+
+for VARIABCOLOR in red green blue
+do
+    echo "COLOR: $COLOR"
+done
+
+--
+
+output:
+    COLOR: red
+    COLOR: green
+    COLOR: blue
+```
+
+### Positional Parameters
+
+- `$ script.sh parameter1 parameter2 parameter3`
+
+    - $0: "script.sh"
+    - $1: "parameter 1"
+    - $2: "parameter 2"
+    - $3: "parameter 3"
+
+- Eg:
+```
+#!/bin/bash
+
+echo "Executing script: $0"
+for user in $@  # all the input params
+do
+    ...
+done
+```
+
+### Accepting User Input (STDIN)
+
+The input can come from human input or the output of a command in a command pipeline.
+
+The `read` comand accepts STDIN
+- Syntax: `read -p "PROMPT" VARIABLE`
+- Eg:
+
+```
+#!/bin/bash
+
+read -p "Enter a user name: " USER
+echo "Archiving users: $USER"
+```
