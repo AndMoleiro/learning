@@ -1,0 +1,7 @@
+Course name: Official DBT learning path
+
+Course URL: https://www.getdbt.com/assets/uploads/dbt_certificate_study_guide.pdf
+
+    - Modules: Checkpoint 1 - Build a Foundation
+        url: https://courses.getdbt.com/courses/fundamentals
+
