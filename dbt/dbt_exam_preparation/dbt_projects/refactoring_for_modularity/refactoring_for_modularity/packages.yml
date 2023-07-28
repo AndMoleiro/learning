@@ -1,4 +1,5 @@
 packages:
+  - package: dbt-labs/audit_helper
+    version: 0.9.0
   - package: dbt-labs/codegen
     version: 0.10.0
-    |‹

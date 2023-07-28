@@ -564,3 +564,488 @@ with tables as (
 [0m11:46:55.098203 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'profiles_dir': '/Users/andremoleiro/.dbt', 'log_path': '/Users/andremoleiro/Documents/Learning/learning-repo/dbt/dbt_exam_preparation/dbt_projects/refactoring_for_modularity/refactoring_for_modularity/logs', 'fail_fast': 'False', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'log_format': 'default', 'introspect': 'True', 'target_path': 'None', 'send_anonymous_usage_stats': 'True'}
 [0m11:46:55.196285 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '35ac56aa-3b18-4e2c-9047-7e637ecaee3e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10476e750>]}
 [0m11:46:55.202077 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '35ac56aa-3b18-4e2c-9047-7e637ecaee3e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104f48290>]}
+[0m11:55:43.876526 [error] [MainThread]: Encountered an error:
+
+[0m11:55:43.883093 [error] [MainThread]: Traceback (most recent call last):
+  File "/Users/andremoleiro/Documents/Learning/learning-repo/dbt/dbt_exam_preparation/dbt_projects/refactoring_for_modularity/.venv/lib/python3.11/site-packages/dbt/cli/requires.py", line 86, in wrapper
+    result, success = func(*args, **kwargs)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/andremoleiro/Documents/Learning/learning-repo/dbt/dbt_exam_preparation/dbt_projects/refactoring_for_modularity/.venv/lib/python3.11/site-packages/dbt/cli/requires.py", line 71, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/andremoleiro/Documents/Learning/learning-repo/dbt/dbt_exam_preparation/dbt_projects/refactoring_for_modularity/.venv/lib/python3.11/site-packages/dbt/cli/requires.py", line 142, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/andremoleiro/Documents/Learning/learning-repo/dbt/dbt_exam_preparation/dbt_projects/refactoring_for_modularity/.venv/lib/python3.11/site-packages/dbt/cli/requires.py", line 168, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/andremoleiro/Documents/Learning/learning-repo/dbt/dbt_exam_preparation/dbt_projects/refactoring_for_modularity/.venv/lib/python3.11/site-packages/dbt/cli/requires.py", line 215, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/andremoleiro/Documents/Learning/learning-repo/dbt/dbt_exam_preparation/dbt_projects/refactoring_for_modularity/.venv/lib/python3.11/site-packages/dbt/cli/main.py", line 301, in docs_serve
+    results = task.run()
+              ^^^^^^^^^^
+  File "/Users/andremoleiro/Documents/Learning/learning-repo/dbt/dbt_exam_preparation/dbt_projects/refactoring_for_modularity/.venv/lib/python3.11/site-packages/dbt/task/serve.py", line 28, in run
+    httpd.serve_forever()
+  File "/opt/homebrew/Cellar/python@3.11/3.11.4_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/socketserver.py", line 233, in serve_forever
+    ready = selector.select(poll_interval)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.11/3.11.4_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/selectors.py", line 415, in select
+    fd_event_list = self._selector.poll(timeout)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt
+
+[0m11:55:43.884623 [debug] [MainThread]: Command `dbt docs serve` failed at 11:55:43.884444 after 528.79 seconds
+[0m11:55:43.885104 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10479edd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10476d650>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104f14fd0>]}
+[0m11:55:43.885546 [debug] [MainThread]: Flushing usage events
+[0m11:56:46.564885 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104133810>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104142d10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1041433d0>]}
+
+
+============================== 11:56:46.566735 | 8739d017-c4bb-4add-977f-2df74978bf0a ==============================
+[0m11:56:46.566735 [info ] [MainThread]: Running with dbt=1.5.3
+[0m11:56:46.567026 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'version_check': 'True', 'log_path': '/Users/andremoleiro/Documents/Learning/learning-repo/dbt/dbt_exam_preparation/dbt_projects/refactoring_for_modularity/refactoring_for_modularity/logs', 'debug': 'False', 'profiles_dir': '/Users/andremoleiro/.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'log_format': 'default', 'static_parser': 'True', 'target_path': 'None', 'send_anonymous_usage_stats': 'True'}
+[0m11:56:46.672153 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '8739d017-c4bb-4add-977f-2df74978bf0a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10414f8d0>]}
+[0m11:56:46.678200 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '8739d017-c4bb-4add-977f-2df74978bf0a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104159310>]}
+[0m11:56:46.678470 [info ] [MainThread]: Registered adapter: snowflake=1.5.2
+[0m11:56:46.692911 [debug] [MainThread]: checksum: d91324b50612e0c4823cec6657ec795d80c11aba9d5b50e83fb26de63277dec4, vars: {}, profile: , target: , version: 1.5.3
+[0m11:56:46.708765 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m11:56:46.708925 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m11:56:46.709143 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.refactoring_for_modularity.example
+[0m11:56:46.711734 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '8739d017-c4bb-4add-977f-2df74978bf0a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104a5ae90>]}
+[0m11:56:46.715744 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '8739d017-c4bb-4add-977f-2df74978bf0a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104988a10>]}
+[0m11:56:46.716048 [info ] [MainThread]: Found 1 model, 0 tests, 0 snapshots, 0 analyses, 447 macros, 0 operations, 0 seed files, 0 sources, 0 exposures, 0 metrics, 0 groups
+[0m11:56:46.716236 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '8739d017-c4bb-4add-977f-2df74978bf0a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x101ead0d0>]}
+[0m11:56:46.716798 [info ] [MainThread]: 
+[0m11:56:46.717162 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m11:56:46.717618 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_analytics'
+[0m11:56:46.723821 [debug] [ThreadPool]: Using snowflake connection "list_analytics"
+[0m11:56:46.724007 [debug] [ThreadPool]: On list_analytics: /* {"app": "dbt", "dbt_version": "1.5.3", "profile_name": "refactoring_for_modularity", "target_name": "dev", "connection_name": "list_analytics"} */
+show terse schemas in database analytics
+    limit 10000
+[0m11:56:46.724126 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m11:56:47.622688 [debug] [ThreadPool]: SQL status: SUCCESS 3 in 1.0 seconds
+[0m11:56:47.625500 [debug] [ThreadPool]: On list_analytics: Close
+[0m11:56:47.748733 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_analytics, now list_analytics_DBT_AMOLEIRO)
+[0m11:56:47.757901 [debug] [ThreadPool]: Using snowflake connection "list_analytics_DBT_AMOLEIRO"
+[0m11:56:47.758308 [debug] [ThreadPool]: On list_analytics_DBT_AMOLEIRO: /* {"app": "dbt", "dbt_version": "1.5.3", "profile_name": "refactoring_for_modularity", "target_name": "dev", "connection_name": "list_analytics_DBT_AMOLEIRO"} */
+show terse objects in analytics.DBT_AMOLEIRO
+[0m11:56:47.758594 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m11:56:48.450691 [debug] [ThreadPool]: SQL status: SUCCESS 14 in 1.0 seconds
+[0m11:56:48.454999 [debug] [ThreadPool]: On list_analytics_DBT_AMOLEIRO: Close
+[0m11:56:48.639961 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '8739d017-c4bb-4add-977f-2df74978bf0a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x102bc6e50>]}
+[0m11:56:48.641182 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m11:56:48.641665 [info ] [MainThread]: 
+[0m11:56:48.647980 [debug] [Thread-1 (]: Began running node model.refactoring_for_modularity.customer_orders
+[0m11:56:48.648633 [info ] [Thread-1 (]: 1 of 1 START sql view model DBT_AMOLEIRO.customer_orders ....................... [RUN]
+[0m11:56:48.649522 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_analytics_DBT_AMOLEIRO, now model.refactoring_for_modularity.customer_orders)
+[0m11:56:48.649925 [debug] [Thread-1 (]: Began compiling node model.refactoring_for_modularity.customer_orders
+[0m11:56:48.651890 [debug] [Thread-1 (]: Writing injected SQL for node "model.refactoring_for_modularity.customer_orders"
+[0m11:56:48.652781 [debug] [Thread-1 (]: Timing info for model.refactoring_for_modularity.customer_orders (compile): 11:56:48.650155 => 11:56:48.652483
+[0m11:56:48.653203 [debug] [Thread-1 (]: Began executing node model.refactoring_for_modularity.customer_orders
+[0m11:56:48.676831 [debug] [Thread-1 (]: Writing runtime sql for node "model.refactoring_for_modularity.customer_orders"
+[0m11:56:48.678626 [debug] [Thread-1 (]: Using snowflake connection "model.refactoring_for_modularity.customer_orders"
+[0m11:56:48.678962 [debug] [Thread-1 (]: On model.refactoring_for_modularity.customer_orders: /* {"app": "dbt", "dbt_version": "1.5.3", "profile_name": "refactoring_for_modularity", "target_name": "dev", "node_id": "model.refactoring_for_modularity.customer_orders"} */
+create or replace   view analytics.DBT_AMOLEIRO.customer_orders
+  
+   as (
+    WITH paid_orders as (select Orders.ID as order_id,
+    Orders.USER_ID	as customer_id,
+    Orders.ORDER_DATE AS order_placed_at,
+        Orders.STATUS AS order_status,
+    p.total_amount_paid,
+    p.payment_finalized_date,
+    C.FIRST_NAME    as customer_first_name,
+        C.LAST_NAME as customer_last_name
+FROM raw.jaffle_shop.orders as Orders
+left join (select ORDERID as order_id, max(CREATED) as payment_finalized_date, sum(AMOUNT) / 100.0 as total_amount_paid
+        from raw.stripe.payment
+        where STATUS <> 'fail'
+        group by 1) p ON orders.ID = p.order_id
+left join raw.jaffle_shop.customers C on orders.USER_ID = C.ID ),
+
+customer_orders 
+as (select C.ID as customer_id
+    , min(ORDER_DATE) as first_order_date
+    , max(ORDER_DATE) as most_recent_order_date
+    , count(ORDERS.ID) AS number_of_orders
+from raw.jaffle_shop.customers C 
+left join raw.jaffle_shop.orders as Orders
+on orders.USER_ID = C.ID 
+group by 1)
+
+select
+p.*,
+ROW_NUMBER() OVER (ORDER BY p.order_id) as transaction_seq,
+ROW_NUMBER() OVER (PARTITION BY customer_id ORDER BY p.order_id) as customer_sales_seq,
+CASE WHEN c.first_order_date = p.order_placed_at
+THEN 'new'
+ELSE 'return' END as nvsr,
+x.clv_bad as customer_lifetime_value,
+c.first_order_date as fdos
+FROM paid_orders p
+left join customer_orders as c USING (customer_id)
+LEFT OUTER JOIN 
+(
+        select
+        p.order_id,
+        sum(t2.total_amount_paid) as clv_bad
+    from paid_orders p
+    left join paid_orders t2 on p.customer_id = t2.customer_id and p.order_id >= t2.order_id
+    group by 1
+    order by p.order_id
+) x on x.order_id = p.order_id
+ORDER BY order_id
+  );
+[0m11:56:48.679264 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m11:56:49.910913 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 1.0 seconds
+[0m11:56:49.939646 [debug] [Thread-1 (]: Timing info for model.refactoring_for_modularity.customer_orders (execute): 11:56:48.653436 => 11:56:49.939459
+[0m11:56:49.940061 [debug] [Thread-1 (]: On model.refactoring_for_modularity.customer_orders: Close
+[0m11:56:50.080475 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '8739d017-c4bb-4add-977f-2df74978bf0a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104989950>]}
+[0m11:56:50.081776 [info ] [Thread-1 (]: 1 of 1 OK created sql view model DBT_AMOLEIRO.customer_orders .................. [[32mSUCCESS 1[0m in 1.43s]
+[0m11:56:50.082766 [debug] [Thread-1 (]: Finished running node model.refactoring_for_modularity.customer_orders
+[0m11:56:50.085138 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m11:56:50.085504 [debug] [MainThread]: Connection 'model.refactoring_for_modularity.customer_orders' was properly closed.
+[0m11:56:50.085839 [info ] [MainThread]: 
+[0m11:56:50.086238 [info ] [MainThread]: Finished running 1 view model in 0 hours 0 minutes and 3.37 seconds (3.37s).
+[0m11:56:50.087010 [debug] [MainThread]: Command end result
+[0m11:56:50.096460 [info ] [MainThread]: 
+[0m11:56:50.096992 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m11:56:50.097326 [info ] [MainThread]: 
+[0m11:56:50.097656 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
+[0m11:56:50.098195 [debug] [MainThread]: Command `cli run` succeeded at 11:56:50.098104 after 3.54 seconds
+[0m11:56:50.098563 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10414f010>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x100893ad0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1008032d0>]}
+[0m11:56:50.098911 [debug] [MainThread]: Flushing usage events
+[0m12:03:45.851728 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106666510>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10667a750>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10667ae50>]}
+
+
+============================== 12:03:45.853751 | 867fca0e-39f2-47f3-aac4-e6cd0d2887e7 ==============================
+[0m12:03:45.853751 [info ] [MainThread]: Running with dbt=1.5.3
+[0m12:03:45.854075 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'fail_fast': 'False', 'log_path': '/Users/andremoleiro/Documents/Learning/learning-repo/dbt/dbt_exam_preparation/dbt_projects/refactoring_for_modularity/refactoring_for_modularity/logs', 'profiles_dir': '/Users/andremoleiro/.dbt', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'log_format': 'default', 'introspect': 'True', 'target_path': 'None', 'send_anonymous_usage_stats': 'True'}
+[0m12:03:45.956242 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '867fca0e-39f2-47f3-aac4-e6cd0d2887e7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10665cc90>]}
+[0m12:03:45.962488 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '867fca0e-39f2-47f3-aac4-e6cd0d2887e7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x102f70e50>]}
+[0m12:03:45.962817 [info ] [MainThread]: Registered adapter: snowflake=1.5.2
+[0m12:03:45.977271 [debug] [MainThread]: checksum: d91324b50612e0c4823cec6657ec795d80c11aba9d5b50e83fb26de63277dec4, vars: {}, profile: , target: , version: 1.5.3
+[0m12:03:45.993594 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m12:03:45.993775 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m12:03:45.994024 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.refactoring_for_modularity.example
+[0m12:03:45.996659 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '867fca0e-39f2-47f3-aac4-e6cd0d2887e7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1066dc850>]}
+[0m12:03:46.000539 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '867fca0e-39f2-47f3-aac4-e6cd0d2887e7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106ed8b90>]}
+[0m12:03:46.000759 [info ] [MainThread]: Found 2 models, 0 tests, 0 snapshots, 0 analyses, 447 macros, 0 operations, 0 seed files, 0 sources, 0 exposures, 0 metrics, 0 groups
+[0m12:03:46.000923 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '867fca0e-39f2-47f3-aac4-e6cd0d2887e7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x102795510>]}
+[0m12:03:46.001508 [info ] [MainThread]: 
+[0m12:03:46.001848 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m12:03:46.002349 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_analytics'
+[0m12:03:46.008005 [debug] [ThreadPool]: Using snowflake connection "list_analytics"
+[0m12:03:46.008155 [debug] [ThreadPool]: On list_analytics: /* {"app": "dbt", "dbt_version": "1.5.3", "profile_name": "refactoring_for_modularity", "target_name": "dev", "connection_name": "list_analytics"} */
+show terse schemas in database analytics
+    limit 10000
+[0m12:03:46.008269 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m12:03:46.832442 [debug] [ThreadPool]: SQL status: SUCCESS 3 in 1.0 seconds
+[0m12:03:46.836076 [debug] [ThreadPool]: On list_analytics: Close
+[0m12:03:46.973599 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_analytics, now list_analytics_DBT_AMOLEIRO)
+[0m12:03:46.979673 [debug] [ThreadPool]: Using snowflake connection "list_analytics_DBT_AMOLEIRO"
+[0m12:03:46.979942 [debug] [ThreadPool]: On list_analytics_DBT_AMOLEIRO: /* {"app": "dbt", "dbt_version": "1.5.3", "profile_name": "refactoring_for_modularity", "target_name": "dev", "connection_name": "list_analytics_DBT_AMOLEIRO"} */
+show terse objects in analytics.DBT_AMOLEIRO
+[0m12:03:46.980137 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m12:03:47.531667 [debug] [ThreadPool]: SQL status: SUCCESS 14 in 1.0 seconds
+[0m12:03:47.535926 [debug] [ThreadPool]: On list_analytics_DBT_AMOLEIRO: Close
+[0m12:03:47.649677 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '867fca0e-39f2-47f3-aac4-e6cd0d2887e7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106e06d10>]}
+[0m12:03:47.650655 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m12:03:47.651067 [info ] [MainThread]: 
+[0m12:03:47.654102 [debug] [Thread-1 (]: Began running node model.refactoring_for_modularity.fct_customer_orders
+[0m12:03:47.654526 [info ] [Thread-1 (]: 1 of 1 START sql view model DBT_AMOLEIRO.fct_customer_orders ................... [RUN]
+[0m12:03:47.655113 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_analytics_DBT_AMOLEIRO, now model.refactoring_for_modularity.fct_customer_orders)
+[0m12:03:47.655392 [debug] [Thread-1 (]: Began compiling node model.refactoring_for_modularity.fct_customer_orders
+[0m12:03:47.656882 [debug] [Thread-1 (]: Writing injected SQL for node "model.refactoring_for_modularity.fct_customer_orders"
+[0m12:03:47.657619 [debug] [Thread-1 (]: Timing info for model.refactoring_for_modularity.fct_customer_orders (compile): 12:03:47.655568 => 12:03:47.657466
+[0m12:03:47.657883 [debug] [Thread-1 (]: Began executing node model.refactoring_for_modularity.fct_customer_orders
+[0m12:03:47.679407 [debug] [Thread-1 (]: Writing runtime sql for node "model.refactoring_for_modularity.fct_customer_orders"
+[0m12:03:47.681303 [debug] [Thread-1 (]: Using snowflake connection "model.refactoring_for_modularity.fct_customer_orders"
+[0m12:03:47.681660 [debug] [Thread-1 (]: On model.refactoring_for_modularity.fct_customer_orders: /* {"app": "dbt", "dbt_version": "1.5.3", "profile_name": "refactoring_for_modularity", "target_name": "dev", "node_id": "model.refactoring_for_modularity.fct_customer_orders"} */
+create or replace   view analytics.DBT_AMOLEIRO.fct_customer_orders
+  
+   as (
+    WITH paid_orders as (select Orders.ID as order_id,
+        Orders.USER_ID    as customer_id,
+        Orders.ORDER_DATE AS order_placed_at,
+            Orders.STATUS AS order_status,
+        p.total_amount_paid,
+        p.payment_finalized_date,
+        C.FIRST_NAME    as customer_first_name,
+            C.LAST_NAME as customer_last_name
+    FROM raw.jaffle_shop.orders as Orders
+    left join (select ORDERID as order_id, max(CREATED) as payment_finalized_date, sum(AMOUNT) / 100.0 as total_amount_paid
+from raw.stripe.payment
+where STATUS <> 'fail'
+group by 1) p ON orders.ID = p.order_id
+left join raw.jaffle_shop.customers C on orders.USER_ID = C.ID ),
+
+customer_orders 
+    as (select C.ID as customer_id
+        , min(ORDER_DATE) as first_order_date
+        , max(ORDER_DATE) as most_recent_order_date
+        , count(ORDERS.ID) AS number_of_orders
+    from raw.jaffle_shop.customers C 
+    left join raw.jaffle_shop.orders as Orders
+    on orders.USER_ID = C.ID 
+    group by 1)
+
+select
+    p.*,
+    ROW_NUMBER() OVER (ORDER BY p.order_id) as transaction_seq,
+    ROW_NUMBER() OVER (PARTITION BY customer_id ORDER BY p.order_id) as customer_sales_seq,
+    CASE WHEN c.first_order_date = p.order_placed_at
+    THEN 'new'
+    ELSE 'return' END as nvsr,
+    x.clv_bad as customer_lifetime_value,
+    c.first_order_date as fdos
+    FROM paid_orders p
+    left join customer_orders as c USING (customer_id)
+    LEFT OUTER JOIN 
+    (
+            select
+            p.order_id,
+            sum(t2.total_amount_paid) as clv_bad
+        from paid_orders p
+        left join paid_orders t2 on p.customer_id = t2.customer_id and p.order_id >= t2.order_id
+        group by 1
+        order by p.order_id
+    ) x on x.order_id = p.order_id
+    ORDER BY order_id
+  );
+[0m12:03:47.681950 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m12:03:48.224630 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 1.0 seconds
+[0m12:03:48.253312 [debug] [Thread-1 (]: Timing info for model.refactoring_for_modularity.fct_customer_orders (execute): 12:03:47.658041 => 12:03:48.253113
+[0m12:03:48.253749 [debug] [Thread-1 (]: On model.refactoring_for_modularity.fct_customer_orders: Close
+[0m12:03:49.010101 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '867fca0e-39f2-47f3-aac4-e6cd0d2887e7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x110827cd0>]}
+[0m12:03:49.011536 [info ] [Thread-1 (]: 1 of 1 OK created sql view model DBT_AMOLEIRO.fct_customer_orders .............. [[32mSUCCESS 1[0m in 1.35s]
+[0m12:03:49.012481 [debug] [Thread-1 (]: Finished running node model.refactoring_for_modularity.fct_customer_orders
+[0m12:03:49.014556 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m12:03:49.014902 [debug] [MainThread]: Connection 'model.refactoring_for_modularity.fct_customer_orders' was properly closed.
+[0m12:03:49.015243 [info ] [MainThread]: 
+[0m12:03:49.015652 [info ] [MainThread]: Finished running 1 view model in 0 hours 0 minutes and 3.01 seconds (3.01s).
+[0m12:03:49.016392 [debug] [MainThread]: Command end result
+[0m12:03:49.024525 [info ] [MainThread]: 
+[0m12:03:49.024898 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m12:03:49.025159 [info ] [MainThread]: 
+[0m12:03:49.025434 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
+[0m12:03:49.025848 [debug] [MainThread]: Command `cli run` succeeded at 12:03:49.025777 after 3.18 seconds
+[0m12:03:49.026120 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106687bd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10117b9d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1010e7150>]}
+[0m12:03:49.026381 [debug] [MainThread]: Flushing usage events
+[0m12:04:19.488881 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1086266d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10863a750>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10863af90>]}
+
+
+============================== 12:04:19.490773 | dd0c439a-2fed-459e-bdfa-10273f3fecda ==============================
+[0m12:04:19.490773 [info ] [MainThread]: Running with dbt=1.5.3
+[0m12:04:19.491102 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/Users/andremoleiro/.dbt', 'version_check': 'True', 'debug': 'False', 'log_path': '/Users/andremoleiro/Documents/Learning/learning-repo/dbt/dbt_exam_preparation/dbt_projects/refactoring_for_modularity/refactoring_for_modularity/logs', 'fail_fast': 'False', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'log_format': 'default', 'static_parser': 'True', 'target_path': 'None', 'send_anonymous_usage_stats': 'True'}
+[0m12:04:19.501948 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'dd0c439a-2fed-459e-bdfa-10273f3fecda', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10863add0>]}
+[0m12:04:19.502845 [debug] [MainThread]: Set downloads directory='/var/folders/3n/z5bw_fy124bgpdchnz83c1jm0000gn/T/dbt-downloads-rowxftm7'
+[0m12:04:19.503080 [debug] [MainThread]: Making package index registry request: GET https://hub.getdbt.com/api/v1/index.json
+[0m12:04:19.784785 [debug] [MainThread]: Response from registry index: GET https://hub.getdbt.com/api/v1/index.json 200
+[0m12:04:19.787053 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/dbt-labs/codegen.json
+[0m12:04:19.941425 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/dbt-labs/codegen.json 200
+[0m12:04:19.944758 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/dbt-labs/audit_helper.json
+[0m12:04:20.111546 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/dbt-labs/audit_helper.json 200
+[0m12:04:20.116845 [error] [MainThread]: Encountered an error:
+Version error for package dbt-labs/dbt_utils: Could not find a satisfactory version from options: ['>=0.8.0', '<2.0.0', '>=0.7.0', '<0.8.0']
+[0m12:04:20.118131 [debug] [MainThread]: Command `dbt deps` failed at 12:04:20.117945 after 0.64 seconds
+[0m12:04:20.118622 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10861d650>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10863af90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108674fd0>]}
+[0m12:04:20.119097 [debug] [MainThread]: Flushing usage events
+[0m12:04:57.350270 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1086f2a10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108705a10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108706a90>]}
+
+
+============================== 12:04:57.352008 | 8565cd6b-c7c5-4251-86b6-31a31aaf6088 ==============================
+[0m12:04:57.352008 [info ] [MainThread]: Running with dbt=1.5.3
+[0m12:04:57.352346 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/Users/andremoleiro/.dbt', 'debug': 'False', 'warn_error': 'None', 'log_path': '/Users/andremoleiro/Documents/Learning/learning-repo/dbt/dbt_exam_preparation/dbt_projects/refactoring_for_modularity/refactoring_for_modularity/logs', 'fail_fast': 'False', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'log_format': 'default', 'introspect': 'True', 'target_path': 'None', 'send_anonymous_usage_stats': 'True'}
+[0m12:04:57.361025 [error] [MainThread]: Encountered an error:
+'version'
+[0m12:04:57.363518 [error] [MainThread]: Traceback (most recent call last):
+  File "/Users/andremoleiro/Documents/Learning/learning-repo/dbt/dbt_exam_preparation/dbt_projects/refactoring_for_modularity/.venv/lib/python3.11/site-packages/dbt/cli/requires.py", line 86, in wrapper
+    result, success = func(*args, **kwargs)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/andremoleiro/Documents/Learning/learning-repo/dbt/dbt_exam_preparation/dbt_projects/refactoring_for_modularity/.venv/lib/python3.11/site-packages/dbt/cli/requires.py", line 71, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/andremoleiro/Documents/Learning/learning-repo/dbt/dbt_exam_preparation/dbt_projects/refactoring_for_modularity/.venv/lib/python3.11/site-packages/dbt/cli/requires.py", line 125, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/andremoleiro/Documents/Learning/learning-repo/dbt/dbt_exam_preparation/dbt_projects/refactoring_for_modularity/.venv/lib/python3.11/site-packages/dbt/cli/requires.py", line 158, in wrapper
+    project = load_project(
+              ^^^^^^^^^^^^^
+  File "/Users/andremoleiro/Documents/Learning/learning-repo/dbt/dbt_exam_preparation/dbt_projects/refactoring_for_modularity/.venv/lib/python3.11/site-packages/dbt/config/runtime.py", line 49, in load_project
+    project = Project.from_project_root(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/andremoleiro/Documents/Learning/learning-repo/dbt/dbt_exam_preparation/dbt_projects/refactoring_for_modularity/.venv/lib/python3.11/site-packages/dbt/config/project.py", line 675, in from_project_root
+    return partial.render(renderer)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/andremoleiro/Documents/Learning/learning-repo/dbt/dbt_exam_preparation/dbt_projects/refactoring_for_modularity/.venv/lib/python3.11/site-packages/dbt/config/project.py", line 288, in render
+    return self.create_project(rendered)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/andremoleiro/Documents/Learning/learning-repo/dbt/dbt_exam_preparation/dbt_projects/refactoring_for_modularity/.venv/lib/python3.11/site-packages/dbt/config/project.py", line 427, in create_project
+    packages = package_config_from_data(rendered.packages_dict)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/andremoleiro/Documents/Learning/learning-repo/dbt/dbt_exam_preparation/dbt_projects/refactoring_for_modularity/.venv/lib/python3.11/site-packages/dbt/config/project.py", line 111, in package_config_from_data
+    PackageConfig.validate(packages_data)
+  File "/Users/andremoleiro/Documents/Learning/learning-repo/dbt/dbt_exam_preparation/dbt_projects/refactoring_for_modularity/.venv/lib/python3.11/site-packages/dbt/contracts/project.py", line 102, in validate
+    if not package["version"]:
+           ~~~~~~~^^^^^^^^^^^
+KeyError: 'version'
+
+[0m12:04:57.364196 [debug] [MainThread]: Command `dbt deps` failed at 12:04:57.364108 after 0.02 seconds
+[0m12:04:57.364403 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1085bcfd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1086e9490>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104dc2e50>]}
+[0m12:04:57.364594 [debug] [MainThread]: Flushing usage events
+[0m12:05:34.771122 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108a53990>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108a66610>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108a66e90>]}
+
+
+============================== 12:05:34.772948 | a571a621-e156-4da8-9ba1-41dc70fb30c4 ==============================
+[0m12:05:34.772948 [info ] [MainThread]: Running with dbt=1.5.3
+[0m12:05:34.773305 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'version_check': 'True', 'log_path': '/Users/andremoleiro/Documents/Learning/learning-repo/dbt/dbt_exam_preparation/dbt_projects/refactoring_for_modularity/refactoring_for_modularity/logs', 'fail_fast': 'False', 'profiles_dir': '/Users/andremoleiro/.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'static_parser': 'True', 'log_format': 'default', 'target_path': 'None', 'send_anonymous_usage_stats': 'True'}
+[0m12:05:34.784465 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'a571a621-e156-4da8-9ba1-41dc70fb30c4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108a67250>]}
+[0m12:05:34.785434 [debug] [MainThread]: Set downloads directory='/var/folders/3n/z5bw_fy124bgpdchnz83c1jm0000gn/T/dbt-downloads-083cwfvx'
+[0m12:05:34.785666 [debug] [MainThread]: Making package index registry request: GET https://hub.getdbt.com/api/v1/index.json
+[0m12:05:35.078081 [debug] [MainThread]: Response from registry index: GET https://hub.getdbt.com/api/v1/index.json 200
+[0m12:05:35.081916 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/dbt-labs/codegen.json
+[0m12:05:35.250681 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/dbt-labs/codegen.json 200
+[0m12:05:35.252960 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/dbt-labs/audit_helper.json
+[0m12:05:35.416657 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/dbt-labs/audit_helper.json 200
+[0m12:05:35.421767 [error] [MainThread]: Encountered an error:
+Version error for package dbt-labs/dbt_utils: Could not find a satisfactory version from options: ['>=0.8.0', '<2.0.0', '>=0.7.0', '<0.8.0']
+[0m12:05:35.423043 [debug] [MainThread]: Command `dbt deps` failed at 12:05:35.422644 after 0.66 seconds
+[0m12:05:35.423666 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108a49710>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108a66c10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108aa0fd0>]}
+[0m12:05:35.424177 [debug] [MainThread]: Flushing usage events
+[0m12:06:17.877137 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105d2b990>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105d3e710>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105d3ef50>]}
+
+
+============================== 12:06:17.878960 | 32d73340-b75e-441a-9326-761272dd7abb ==============================
+[0m12:06:17.878960 [info ] [MainThread]: Running with dbt=1.5.3
+[0m12:06:17.879277 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/Users/andremoleiro/.dbt', 'version_check': 'True', 'fail_fast': 'False', 'log_path': '/Users/andremoleiro/Documents/Learning/learning-repo/dbt/dbt_exam_preparation/dbt_projects/refactoring_for_modularity/refactoring_for_modularity/logs', 'debug': 'False', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'introspect': 'True', 'log_format': 'default', 'target_path': 'None', 'send_anonymous_usage_stats': 'True'}
+[0m12:06:17.890315 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '32d73340-b75e-441a-9326-761272dd7abb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10429ba90>]}
+[0m12:06:17.891288 [debug] [MainThread]: Set downloads directory='/var/folders/3n/z5bw_fy124bgpdchnz83c1jm0000gn/T/dbt-downloads-bu0jap77'
+[0m12:06:17.891563 [debug] [MainThread]: Making package index registry request: GET https://hub.getdbt.com/api/v1/index.json
+[0m12:06:18.168304 [debug] [MainThread]: Response from registry index: GET https://hub.getdbt.com/api/v1/index.json 200
+[0m12:06:18.172242 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/dbt-labs/audit_helper.json
+[0m12:06:18.337395 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/dbt-labs/audit_helper.json 200
+[0m12:06:18.342190 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json
+[0m12:06:18.519684 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json 200
+[0m12:06:18.531552 [error] [MainThread]: Encountered an error:
+Could not find a matching compatible version for package dbt-labs/dbt_utils
+  Requested range: >=0.7.0, <0.8.0
+  Compatible versions: ['0.0.1', '0.1.0', '0.1.1', '0.1.2', '0.1.3', '0.1.4', '0.1.5', '0.1.6', '0.1.7', '0.1.8', '0.1.9', '0.1.10', '0.1.11', '0.1.12', '0.1.13', '0.1.14', '0.1.15', '0.1.16', '0.1.17', '0.1.18', '0.1.19', '0.1.20', '0.1.21', '0.1.22', '0.1.23', '0.1.24', '0.1.25', '0.2.0', '0.2.1', '0.2.2', '0.2.3', '0.2.4', '0.2.5', '0.3.0', '0.4.0', '0.4.1', '0.5.0', '0.8.0', '0.8.1', '0.8.2', '0.8.3', '0.8.4', '0.8.5', '0.8.6', '0.9.0', '0.9.1', '0.9.2', '0.9.5', '0.9.6', '1.0.0', '1.1.0', '1.1.1']
+
+  Not shown: package versions incompatible with installed version of dbt-core
+  To include them, run 'dbt --no-version-check deps'
+[0m12:06:18.532647 [debug] [MainThread]: Command `dbt deps` failed at 12:06:18.532492 after 0.66 seconds
+[0m12:06:18.533063 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105d215d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105d3ed50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1023fae90>]}
+[0m12:06:18.533465 [debug] [MainThread]: Flushing usage events
+[0m12:07:05.783712 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107a66850>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107a70250>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107a7acd0>]}
+
+
+============================== 12:07:05.785467 | a872e5d7-08ba-434c-a678-3eaa0eda4925 ==============================
+[0m12:07:05.785467 [info ] [MainThread]: Running with dbt=1.5.3
+[0m12:07:05.785785 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/Users/andremoleiro/.dbt', 'fail_fast': 'False', 'warn_error': 'None', 'log_path': '/Users/andremoleiro/Documents/Learning/learning-repo/dbt/dbt_exam_preparation/dbt_projects/refactoring_for_modularity/refactoring_for_modularity/logs', 'version_check': 'True', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'introspect': 'True', 'log_format': 'default', 'target_path': 'None', 'send_anonymous_usage_stats': 'True'}
+[0m12:07:05.796654 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'a872e5d7-08ba-434c-a678-3eaa0eda4925', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107a7a6d0>]}
+[0m12:07:05.797770 [debug] [MainThread]: Set downloads directory='/var/folders/3n/z5bw_fy124bgpdchnz83c1jm0000gn/T/dbt-downloads-p8_gse_t'
+[0m12:07:05.797988 [debug] [MainThread]: Making package index registry request: GET https://hub.getdbt.com/api/v1/index.json
+[0m12:07:06.045880 [debug] [MainThread]: Response from registry index: GET https://hub.getdbt.com/api/v1/index.json 200
+[0m12:07:06.049240 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/dbt-labs/audit_helper.json
+[0m12:07:06.205391 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/dbt-labs/audit_helper.json 200
+[0m12:07:06.209325 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json
+[0m12:07:06.377284 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json 200
+[0m12:07:06.393937 [info ] [MainThread]: Installing dbt-labs/audit_helper
+[0m12:07:06.749812 [info ] [MainThread]: Installed from version 0.9.0
+[0m12:07:06.750243 [info ] [MainThread]: Up to date!
+[0m12:07:06.750691 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'package', 'label': 'a872e5d7-08ba-434c-a678-3eaa0eda4925', 'property_': 'install', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107a89f90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107aacc50>]}
+[0m12:07:06.751074 [info ] [MainThread]: Installing dbt-labs/dbt_utils
+[0m12:07:07.235728 [info ] [MainThread]: Installed from version 1.1.1
+[0m12:07:07.236009 [info ] [MainThread]: Up to date!
+[0m12:07:07.236268 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'package', 'label': 'a872e5d7-08ba-434c-a678-3eaa0eda4925', 'property_': 'install', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107a8bad0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107a79310>]}
+[0m12:07:07.236998 [debug] [MainThread]: Command `dbt deps` succeeded at 12:07:07.236931 after 1.46 seconds
+[0m12:07:07.237210 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x102dcb510>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x102fa34d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x102eac310>]}
+[0m12:07:07.237385 [debug] [MainThread]: Flushing usage events
+[0m12:07:34.033610 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10470f990>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104722310>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104722b90>]}
+
+
+============================== 12:07:34.035455 | 27aec94d-fb5f-43e7-bc4a-4f2bddbc2c46 ==============================
+[0m12:07:34.035455 [info ] [MainThread]: Running with dbt=1.5.3
+[0m12:07:34.035764 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'version_check': 'True', 'log_path': '/Users/andremoleiro/Documents/Learning/learning-repo/dbt/dbt_exam_preparation/dbt_projects/refactoring_for_modularity/refactoring_for_modularity/logs', 'fail_fast': 'False', 'profiles_dir': '/Users/andremoleiro/.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'introspect': 'True', 'log_format': 'default', 'target_path': 'None', 'send_anonymous_usage_stats': 'True'}
+[0m12:07:34.046682 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '27aec94d-fb5f-43e7-bc4a-4f2bddbc2c46', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104722a10>]}
+[0m12:07:34.047394 [debug] [MainThread]: Set downloads directory='/var/folders/3n/z5bw_fy124bgpdchnz83c1jm0000gn/T/dbt-downloads-4902y0l5'
+[0m12:07:34.047620 [debug] [MainThread]: Making package index registry request: GET https://hub.getdbt.com/api/v1/index.json
+[0m12:07:34.321928 [debug] [MainThread]: Response from registry index: GET https://hub.getdbt.com/api/v1/index.json 200
+[0m12:07:34.325466 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/dbt-labs/audit_helper.json
+[0m12:07:34.489871 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/dbt-labs/audit_helper.json 200
+[0m12:07:34.494171 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/dbt-labs/codegen.json
+[0m12:07:34.660746 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/dbt-labs/codegen.json 200
+[0m12:07:34.666475 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json
+[0m12:07:34.836828 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json 200
+[0m12:07:34.853504 [info ] [MainThread]: Installing dbt-labs/audit_helper
+[0m12:07:35.193835 [info ] [MainThread]: Installed from version 0.9.0
+[0m12:07:35.194183 [info ] [MainThread]: Up to date!
+[0m12:07:35.194517 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'package', 'label': '27aec94d-fb5f-43e7-bc4a-4f2bddbc2c46', 'property_': 'install', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104755390>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10470f150>]}
+[0m12:07:35.194806 [info ] [MainThread]: Installing dbt-labs/codegen
+[0m12:07:35.535356 [info ] [MainThread]: Installed from version 0.10.0
+[0m12:07:35.535710 [info ] [MainThread]: Up to date!
+[0m12:07:35.536003 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'package', 'label': '27aec94d-fb5f-43e7-bc4a-4f2bddbc2c46', 'property_': 'install', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10470ebd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10470f150>]}
+[0m12:07:35.536293 [info ] [MainThread]: Installing dbt-labs/dbt_utils
+[0m12:07:35.985144 [info ] [MainThread]: Installed from version 1.1.1
+[0m12:07:35.985430 [info ] [MainThread]: Up to date!
+[0m12:07:35.985666 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'package', 'label': '27aec94d-fb5f-43e7-bc4a-4f2bddbc2c46', 'property_': 'install', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10470e490>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10475f050>]}
+[0m12:07:35.986482 [debug] [MainThread]: Command `dbt deps` succeeded at 12:07:35.986406 after 1.96 seconds
+[0m12:07:35.986703 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x100c97510>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x100e6f4d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1034893d0>]}
+[0m12:07:35.986901 [debug] [MainThread]: Flushing usage events
+[0m12:10:02.406890 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10863e250>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108652910>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108653010>]}
+
+
+============================== 12:10:02.408697 | 93f47183-5619-4417-9cfd-3afef2cbdb0d ==============================
+[0m12:10:02.408697 [info ] [MainThread]: Running with dbt=1.5.3
+[0m12:10:02.409029 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'profiles_dir': '/Users/andremoleiro/.dbt', 'log_path': '/Users/andremoleiro/Documents/Learning/learning-repo/dbt/dbt_exam_preparation/dbt_projects/refactoring_for_modularity/refactoring_for_modularity/logs', 'debug': 'False', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'static_parser': 'True', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'send_anonymous_usage_stats': 'True'}
+[0m12:10:02.527439 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '93f47183-5619-4417-9cfd-3afef2cbdb0d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1077b5b50>]}
+[0m12:10:02.533605 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '93f47183-5619-4417-9cfd-3afef2cbdb0d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108666190>]}
+[0m12:10:02.533984 [info ] [MainThread]: Registered adapter: snowflake=1.5.2
+[0m12:10:02.551568 [debug] [MainThread]: checksum: d91324b50612e0c4823cec6657ec795d80c11aba9d5b50e83fb26de63277dec4, vars: {}, profile: , target: , version: 1.5.3
+[0m12:10:02.556613 [info ] [MainThread]: Unable to do partial parsing because a project dependency has been added
+[0m12:10:02.556870 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '93f47183-5619-4417-9cfd-3afef2cbdb0d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108697dd0>]}
+[0m12:10:02.923272 [debug] [MainThread]: 1699: static parser successfully parsed legacy/fct_customer_orders.sql
+[0m12:10:02.928743 [debug] [MainThread]: 1699: static parser successfully parsed legacy/customer_orders.sql
+[0m12:10:02.966738 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.refactoring_for_modularity.example
+[0m12:10:02.968812 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '93f47183-5619-4417-9cfd-3afef2cbdb0d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108fae010>]}
+[0m12:10:02.972430 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '93f47183-5619-4417-9cfd-3afef2cbdb0d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1094aa010>]}
+[0m12:10:02.972614 [info ] [MainThread]: Found 2 models, 0 tests, 0 snapshots, 1 analysis, 464 macros, 0 operations, 0 seed files, 0 sources, 0 exposures, 0 metrics, 0 groups
+[0m12:10:02.972779 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '93f47183-5619-4417-9cfd-3afef2cbdb0d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108652fd0>]}
+[0m12:10:02.973354 [info ] [MainThread]: 
+[0m12:10:02.973527 [warn ] [MainThread]: Nothing to do. Try checking your model configs and model specification args
+[0m12:10:02.973739 [debug] [MainThread]: Command end result
+[0m12:10:02.977135 [debug] [MainThread]: Command `cli run` succeeded at 12:10:02.977086 after 0.58 seconds
+[0m12:10:02.977306 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108659bd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104d9fbd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104d0f2d0>]}
+[0m12:10:02.977448 [debug] [MainThread]: Flushing usage events
+[0m12:10:22.442462 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1043f6850>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1043ef5d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1043db2d0>]}
+
+
+============================== 12:10:22.444420 | 7d7eb559-d4d9-4135-995b-197452ba2cdf ==============================
+[0m12:10:22.444420 [info ] [MainThread]: Running with dbt=1.5.3
+[0m12:10:22.444743 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'fail_fast': 'False', 'log_path': '/Users/andremoleiro/Documents/Learning/learning-repo/dbt/dbt_exam_preparation/dbt_projects/refactoring_for_modularity/refactoring_for_modularity/logs', 'version_check': 'True', 'profiles_dir': '/Users/andremoleiro/.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'log_format': 'default', 'static_parser': 'True', 'target_path': 'None', 'send_anonymous_usage_stats': 'True'}
+[0m12:10:22.544765 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '7d7eb559-d4d9-4135-995b-197452ba2cdf', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104407b10>]}
+[0m12:10:22.550971 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '7d7eb559-d4d9-4135-995b-197452ba2cdf', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104a5c9d0>]}
+[0m12:10:22.551275 [info ] [MainThread]: Registered adapter: snowflake=1.5.2
+[0m12:10:22.568671 [debug] [MainThread]: checksum: d91324b50612e0c4823cec6657ec795d80c11aba9d5b50e83fb26de63277dec4, vars: {}, profile: , target: , version: 1.5.3
+[0m12:10:22.585550 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m12:10:22.585717 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m12:10:22.585954 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.refactoring_for_modularity.example
+[0m12:10:22.588568 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '7d7eb559-d4d9-4135-995b-197452ba2cdf', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104cf28d0>]}
+[0m12:10:22.592678 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '7d7eb559-d4d9-4135-995b-197452ba2cdf', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104bdbd90>]}
+[0m12:10:22.592890 [info ] [MainThread]: Found 2 models, 0 tests, 0 snapshots, 1 analysis, 464 macros, 0 operations, 0 seed files, 0 sources, 0 exposures, 0 metrics, 0 groups
+[0m12:10:22.593058 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '7d7eb559-d4d9-4135-995b-197452ba2cdf', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x102165350>]}
+[0m12:10:22.593586 [info ] [MainThread]: 
+[0m12:10:22.593754 [warn ] [MainThread]: Nothing to do. Try checking your model configs and model specification args
+[0m12:10:22.593966 [debug] [MainThread]: Command end result
+[0m12:10:22.597230 [debug] [MainThread]: Command `cli test` succeeded at 12:10:22.597184 after 0.16 seconds
+[0m12:10:22.597400 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x100b4bbd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x100abb310>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x100abb2d0>]}
+[0m12:10:22.597543 [debug] [MainThread]: Flushing usage events
