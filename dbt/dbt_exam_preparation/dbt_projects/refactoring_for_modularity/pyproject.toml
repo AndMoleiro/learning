@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "refactoring-for-modularity"
+version = "0.1.0"
+description = ""
+authors = ["AndMoleiro <andre.o.moleiro@gmail.com>"]
+readme = "README.md"
+packages = [{include = "refactoring_for_modularity"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+dbt-snowflake = "^1.5.2"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

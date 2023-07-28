@@ -1,0 +1,218 @@
+[0m10:43:46.708505 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1082da850>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1082ea4d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1082ead50>]}
+
+
+============================== 10:43:46.710250 | eb3ce87d-05a4-43f6-862b-b40e84d894c7 ==============================
+[0m10:43:46.710250 [info ] [MainThread]: Running with dbt=1.5.3
+[0m10:43:46.710574 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'debug': 'False', 'log_path': '/Users/andremoleiro/Documents/Learning/learning-repo/dbt/dbt_exam_preparation/dbt_projects/refactoring_for_modularity/refactoring_for_modularity/logs', 'version_check': 'True', 'profiles_dir': '/Users/andremoleiro/.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'static_parser': 'True', 'log_format': 'default', 'target_path': 'None', 'send_anonymous_usage_stats': 'True'}
+[0m10:43:46.807270 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'eb3ce87d-05a4-43f6-862b-b40e84d894c7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1082cbe90>]}
+[0m10:43:46.813138 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'eb3ce87d-05a4-43f6-862b-b40e84d894c7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1082cbe90>]}
+[0m10:43:46.813641 [info ] [MainThread]: Registered adapter: snowflake=1.5.2
+[0m10:43:46.822821 [debug] [MainThread]: checksum: d91324b50612e0c4823cec6657ec795d80c11aba9d5b50e83fb26de63277dec4, vars: {}, profile: , target: , version: 1.5.3
+[0m10:43:46.823187 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m10:43:46.823395 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': 'eb3ce87d-05a4-43f6-862b-b40e84d894c7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10830c150>]}
+[0m10:43:47.054061 [debug] [MainThread]: 1699: static parser successfully parsed example/my_first_dbt_model.sql
+[0m10:43:47.059520 [debug] [MainThread]: 1699: static parser successfully parsed example/my_second_dbt_model.sql
+[0m10:43:47.088436 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'eb3ce87d-05a4-43f6-862b-b40e84d894c7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108baf350>]}
+[0m10:43:47.091204 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'eb3ce87d-05a4-43f6-862b-b40e84d894c7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108ba5750>]}
+[0m10:43:47.091387 [info ] [MainThread]: Found 2 models, 4 tests, 0 snapshots, 0 analyses, 322 macros, 0 operations, 0 seed files, 0 sources, 0 exposures, 0 metrics, 0 groups
+[0m10:43:47.092225 [info ] [MainThread]: 
+[0m10:43:47.092550 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m10:43:47.092961 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_analytics'
+[0m10:43:47.098160 [debug] [ThreadPool]: Using snowflake connection "list_analytics"
+[0m10:43:47.098295 [debug] [ThreadPool]: On list_analytics: /* {"app": "dbt", "dbt_version": "1.5.3", "profile_name": "refactoring_for_modularity", "target_name": "dev", "connection_name": "list_analytics"} */
+show terse schemas in database analytics
+    limit 10000
+[0m10:43:47.098406 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m10:43:52.128484 [debug] [ThreadPool]: SQL status: SUCCESS 3 in 5.0 seconds
+[0m10:43:52.132451 [debug] [ThreadPool]: On list_analytics: Close
+[0m10:43:52.266869 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_analytics, now list_analytics_DBT_AMOLEIRO)
+[0m10:43:52.274424 [debug] [ThreadPool]: Using snowflake connection "list_analytics_DBT_AMOLEIRO"
+[0m10:43:52.274763 [debug] [ThreadPool]: On list_analytics_DBT_AMOLEIRO: /* {"app": "dbt", "dbt_version": "1.5.3", "profile_name": "refactoring_for_modularity", "target_name": "dev", "connection_name": "list_analytics_DBT_AMOLEIRO"} */
+show terse objects in analytics.DBT_AMOLEIRO
+[0m10:43:52.275034 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m10:43:52.683736 [debug] [ThreadPool]: SQL status: SUCCESS 14 in 0.0 seconds
+[0m10:43:52.687100 [debug] [ThreadPool]: On list_analytics_DBT_AMOLEIRO: Close
+[0m10:43:52.816247 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'eb3ce87d-05a4-43f6-862b-b40e84d894c7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108aa4710>]}
+[0m10:43:52.817041 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m10:43:52.817402 [info ] [MainThread]: 
+[0m10:43:52.834926 [debug] [Thread-1 (]: Began running node model.refactoring_for_modularity.my_first_dbt_model
+[0m10:43:52.835327 [info ] [Thread-1 (]: 1 of 6 START sql table model DBT_AMOLEIRO.my_first_dbt_model ................... [RUN]
+[0m10:43:52.835835 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_analytics_DBT_AMOLEIRO, now model.refactoring_for_modularity.my_first_dbt_model)
+[0m10:43:52.836050 [debug] [Thread-1 (]: Began compiling node model.refactoring_for_modularity.my_first_dbt_model
+[0m10:43:52.837949 [debug] [Thread-1 (]: Writing injected SQL for node "model.refactoring_for_modularity.my_first_dbt_model"
+[0m10:43:52.838653 [debug] [Thread-1 (]: Timing info for model.refactoring_for_modularity.my_first_dbt_model (compile): 10:43:52.836184 => 10:43:52.838526
+[0m10:43:52.838866 [debug] [Thread-1 (]: Began executing node model.refactoring_for_modularity.my_first_dbt_model
+[0m10:43:52.855405 [debug] [Thread-1 (]: Writing runtime sql for node "model.refactoring_for_modularity.my_first_dbt_model"
+[0m10:43:52.856208 [debug] [Thread-1 (]: Using snowflake connection "model.refactoring_for_modularity.my_first_dbt_model"
+[0m10:43:52.856413 [debug] [Thread-1 (]: On model.refactoring_for_modularity.my_first_dbt_model: /* {"app": "dbt", "dbt_version": "1.5.3", "profile_name": "refactoring_for_modularity", "target_name": "dev", "node_id": "model.refactoring_for_modularity.my_first_dbt_model"} */
+create or replace transient table analytics.DBT_AMOLEIRO.my_first_dbt_model
+         as
+        (/*
+    Welcome to your first dbt model!
+    Did you know that you can also configure models directly within SQL files?
+    This will override configurations stated in dbt_project.yml
+
+    Try changing "table" to "view" below
+*/
+
+
+
+with source_data as (
+
+    select 1 as id
+    union all
+    select null as id
+
+)
+
+select *
+from source_data
+
+/*
+    Uncomment the line below to remove records with null `id` values
+*/
+
+-- where id is not null
+        );
+[0m10:43:52.856598 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m10:43:54.363495 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 2.0 seconds
+[0m10:43:54.387779 [debug] [Thread-1 (]: Timing info for model.refactoring_for_modularity.my_first_dbt_model (execute): 10:43:52.838995 => 10:43:54.387613
+[0m10:43:54.388146 [debug] [Thread-1 (]: On model.refactoring_for_modularity.my_first_dbt_model: Close
+[0m10:43:54.495099 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'eb3ce87d-05a4-43f6-862b-b40e84d894c7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108c1d790>]}
+[0m10:43:54.496350 [info ] [Thread-1 (]: 1 of 6 OK created sql table model DBT_AMOLEIRO.my_first_dbt_model .............. [[32mSUCCESS 1[0m in 1.66s]
+[0m10:43:54.497342 [debug] [Thread-1 (]: Finished running node model.refactoring_for_modularity.my_first_dbt_model
+[0m10:43:54.499040 [debug] [Thread-1 (]: Began running node test.refactoring_for_modularity.not_null_my_first_dbt_model_id.5fb22c2710
+[0m10:43:54.499726 [info ] [Thread-1 (]: 2 of 6 START test not_null_my_first_dbt_model_id ............................... [RUN]
+[0m10:43:54.500738 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.refactoring_for_modularity.my_first_dbt_model, now test.refactoring_for_modularity.not_null_my_first_dbt_model_id.5fb22c2710)
+[0m10:43:54.501180 [debug] [Thread-1 (]: Began compiling node test.refactoring_for_modularity.not_null_my_first_dbt_model_id.5fb22c2710
+[0m10:43:54.517695 [debug] [Thread-1 (]: Writing injected SQL for node "test.refactoring_for_modularity.not_null_my_first_dbt_model_id.5fb22c2710"
+[0m10:43:54.518673 [debug] [Thread-1 (]: Timing info for test.refactoring_for_modularity.not_null_my_first_dbt_model_id.5fb22c2710 (compile): 10:43:54.501457 => 10:43:54.518509
+[0m10:43:54.518978 [debug] [Thread-1 (]: Began executing node test.refactoring_for_modularity.not_null_my_first_dbt_model_id.5fb22c2710
+[0m10:43:54.561136 [debug] [Thread-1 (]: Writing runtime sql for node "test.refactoring_for_modularity.not_null_my_first_dbt_model_id.5fb22c2710"
+[0m10:43:54.561822 [debug] [Thread-1 (]: Using snowflake connection "test.refactoring_for_modularity.not_null_my_first_dbt_model_id.5fb22c2710"
+[0m10:43:54.562021 [debug] [Thread-1 (]: On test.refactoring_for_modularity.not_null_my_first_dbt_model_id.5fb22c2710: /* {"app": "dbt", "dbt_version": "1.5.3", "profile_name": "refactoring_for_modularity", "target_name": "dev", "node_id": "test.refactoring_for_modularity.not_null_my_first_dbt_model_id.5fb22c2710"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select id
+from analytics.DBT_AMOLEIRO.my_first_dbt_model
+where id is null
+
+
+
+      
+    ) dbt_internal_test
+[0m10:43:54.562191 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m10:43:55.182309 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 1.0 seconds
+[0m10:43:55.190074 [debug] [Thread-1 (]: Timing info for test.refactoring_for_modularity.not_null_my_first_dbt_model_id.5fb22c2710 (execute): 10:43:54.519163 => 10:43:55.189722
+[0m10:43:55.190691 [debug] [Thread-1 (]: On test.refactoring_for_modularity.not_null_my_first_dbt_model_id.5fb22c2710: Close
+[0m10:43:55.304010 [error] [Thread-1 (]: 2 of 6 FAIL 1 not_null_my_first_dbt_model_id ................................... [[31mFAIL 1[0m in 0.80s]
+[0m10:43:55.304905 [debug] [Thread-1 (]: Finished running node test.refactoring_for_modularity.not_null_my_first_dbt_model_id.5fb22c2710
+[0m10:43:55.305387 [debug] [Thread-1 (]: Began running node test.refactoring_for_modularity.unique_my_first_dbt_model_id.16e066b321
+[0m10:43:55.305917 [info ] [Thread-1 (]: 3 of 6 START test unique_my_first_dbt_model_id ................................. [RUN]
+[0m10:43:55.306673 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.refactoring_for_modularity.not_null_my_first_dbt_model_id.5fb22c2710, now test.refactoring_for_modularity.unique_my_first_dbt_model_id.16e066b321)
+[0m10:43:55.307061 [debug] [Thread-1 (]: Began compiling node test.refactoring_for_modularity.unique_my_first_dbt_model_id.16e066b321
+[0m10:43:55.313621 [debug] [Thread-1 (]: Writing injected SQL for node "test.refactoring_for_modularity.unique_my_first_dbt_model_id.16e066b321"
+[0m10:43:55.314363 [debug] [Thread-1 (]: Timing info for test.refactoring_for_modularity.unique_my_first_dbt_model_id.16e066b321 (compile): 10:43:55.307274 => 10:43:55.314207
+[0m10:43:55.314659 [debug] [Thread-1 (]: Began executing node test.refactoring_for_modularity.unique_my_first_dbt_model_id.16e066b321
+[0m10:43:55.316736 [debug] [Thread-1 (]: Writing runtime sql for node "test.refactoring_for_modularity.unique_my_first_dbt_model_id.16e066b321"
+[0m10:43:55.317613 [debug] [Thread-1 (]: Using snowflake connection "test.refactoring_for_modularity.unique_my_first_dbt_model_id.16e066b321"
+[0m10:43:55.318057 [debug] [Thread-1 (]: On test.refactoring_for_modularity.unique_my_first_dbt_model_id.16e066b321: /* {"app": "dbt", "dbt_version": "1.5.3", "profile_name": "refactoring_for_modularity", "target_name": "dev", "node_id": "test.refactoring_for_modularity.unique_my_first_dbt_model_id.16e066b321"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+select
+    id as unique_field,
+    count(*) as n_records
+
+from analytics.DBT_AMOLEIRO.my_first_dbt_model
+where id is not null
+group by id
+having count(*) > 1
+
+
+
+      
+    ) dbt_internal_test
+[0m10:43:55.318345 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m10:43:55.813273 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.0 seconds
+[0m10:43:55.819700 [debug] [Thread-1 (]: Timing info for test.refactoring_for_modularity.unique_my_first_dbt_model_id.16e066b321 (execute): 10:43:55.314833 => 10:43:55.819147
+[0m10:43:55.820688 [debug] [Thread-1 (]: On test.refactoring_for_modularity.unique_my_first_dbt_model_id.16e066b321: Close
+[0m10:43:55.942332 [info ] [Thread-1 (]: 3 of 6 PASS unique_my_first_dbt_model_id ....................................... [[32mPASS[0m in 0.64s]
+[0m10:43:55.943338 [debug] [Thread-1 (]: Finished running node test.refactoring_for_modularity.unique_my_first_dbt_model_id.16e066b321
+[0m10:43:55.944375 [debug] [Thread-1 (]: Began running node model.refactoring_for_modularity.my_second_dbt_model
+[0m10:43:55.944883 [info ] [Thread-1 (]: 4 of 6 SKIP relation DBT_AMOLEIRO.my_second_dbt_model .......................... [[33mSKIP[0m]
+[0m10:43:55.945442 [debug] [Thread-1 (]: Finished running node model.refactoring_for_modularity.my_second_dbt_model
+[0m10:43:55.946135 [debug] [Thread-1 (]: Began running node test.refactoring_for_modularity.not_null_my_second_dbt_model_id.151b76d778
+[0m10:43:55.946612 [info ] [Thread-1 (]: 5 of 6 SKIP test not_null_my_second_dbt_model_id ............................... [[33mSKIP[0m]
+[0m10:43:55.947146 [debug] [Thread-1 (]: Finished running node test.refactoring_for_modularity.not_null_my_second_dbt_model_id.151b76d778
+[0m10:43:55.947562 [debug] [Thread-1 (]: Began running node test.refactoring_for_modularity.unique_my_second_dbt_model_id.57a0f8c493
+[0m10:43:55.948002 [info ] [Thread-1 (]: 6 of 6 SKIP test unique_my_second_dbt_model_id ................................. [[33mSKIP[0m]
+[0m10:43:55.948496 [debug] [Thread-1 (]: Finished running node test.refactoring_for_modularity.unique_my_second_dbt_model_id.57a0f8c493
+[0m10:43:55.950116 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m10:43:55.950438 [debug] [MainThread]: Connection 'test.refactoring_for_modularity.unique_my_first_dbt_model_id.16e066b321' was properly closed.
+[0m10:43:55.950773 [info ] [MainThread]: 
+[0m10:43:55.951095 [info ] [MainThread]: Finished running 1 table model, 4 tests, 1 view model in 0 hours 0 minutes and 8.86 seconds (8.86s).
+[0m10:43:55.951959 [debug] [MainThread]: Command end result
+[0m10:43:55.957904 [info ] [MainThread]: 
+[0m10:43:55.958228 [info ] [MainThread]: [31mCompleted with 1 error and 0 warnings:[0m
+[0m10:43:55.958485 [info ] [MainThread]: 
+[0m10:43:55.958744 [error] [MainThread]: [31mFailure in test not_null_my_first_dbt_model_id (models/example/schema.yml)[0m
+[0m10:43:55.958995 [error] [MainThread]:   Got 1 result, configured to fail if != 0
+[0m10:43:55.959235 [info ] [MainThread]: 
+[0m10:43:55.959571 [info ] [MainThread]:   compiled Code at target/compiled/refactoring_for_modularity/models/example/schema.yml/not_null_my_first_dbt_model_id.sql
+[0m10:43:55.959918 [info ] [MainThread]: 
+[0m10:43:55.960229 [info ] [MainThread]: Done. PASS=2 WARN=0 ERROR=1 SKIP=3 TOTAL=6
+[0m10:43:55.960688 [debug] [MainThread]: Command `dbt build` failed at 10:43:55.960610 after 9.26 seconds
+[0m10:43:55.961008 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1082d1310>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104a47390>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104a47410>]}
+[0m10:43:55.961322 [debug] [MainThread]: Flushing usage events
+[0m10:45:30.307075 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1080b6850>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1080c5d90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1080c6610>]}
+
+
+============================== 10:45:30.308923 | f0ecf51d-2f3b-461c-9cba-6b4dfe7a32ad ==============================
+[0m10:45:30.308923 [info ] [MainThread]: Running with dbt=1.5.3
+[0m10:45:30.309256 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'debug': 'False', 'log_path': '/Users/andremoleiro/Documents/Learning/learning-repo/dbt/dbt_exam_preparation/dbt_projects/refactoring_for_modularity/refactoring_for_modularity/logs', 'fail_fast': 'False', 'profiles_dir': '/Users/andremoleiro/.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'introspect': 'True', 'log_format': 'default', 'target_path': 'None', 'send_anonymous_usage_stats': 'True'}
+[0m10:45:30.319092 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'f0ecf51d-2f3b-461c-9cba-6b4dfe7a32ad', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107f81190>]}
+[0m10:45:30.319418 [info ] [MainThread]: Warning: No packages were found in packages.yml
+[0m10:45:30.319707 [debug] [MainThread]: Command `dbt deps` succeeded at 10:45:30.319653 after 0.02 seconds
+[0m10:45:30.319865 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10464b510>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104823410>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10472c250>]}
+[0m10:45:30.320017 [debug] [MainThread]: Flushing usage events
+[0m10:46:07.336083 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104592850>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10459c250>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1045a2410>]}
+
+
+============================== 10:46:07.337909 | 9f66b2fe-399d-4e1f-a364-9900ba67afbc ==============================
+[0m10:46:07.337909 [info ] [MainThread]: Running with dbt=1.5.3
+[0m10:46:07.338243 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'version_check': 'True', 'log_path': '/Users/andremoleiro/Documents/Learning/learning-repo/dbt/dbt_exam_preparation/dbt_projects/refactoring_for_modularity/refactoring_for_modularity/logs', 'profiles_dir': '/Users/andremoleiro/.dbt', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'log_format': 'default', 'introspect': 'True', 'target_path': 'None', 'send_anonymous_usage_stats': 'True'}
+[0m10:46:07.348153 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '9f66b2fe-399d-4e1f-a364-9900ba67afbc', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1045adc90>]}
+[0m10:46:07.349059 [debug] [MainThread]: Set downloads directory='/var/folders/3n/z5bw_fy124bgpdchnz83c1jm0000gn/T/dbt-downloads-7lefbxz_'
+[0m10:46:07.349260 [debug] [MainThread]: Making package index registry request: GET https://hub.getdbt.com/api/v1/index.json
+[0m10:46:07.640042 [debug] [MainThread]: Response from registry index: GET https://hub.getdbt.com/api/v1/index.json 200
+[0m10:46:07.643236 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/dbt-labs/codegen.json
+[0m10:46:07.842295 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/dbt-labs/codegen.json 200
+[0m10:46:07.848063 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json
+[0m10:46:08.022935 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json 200
+[0m10:46:08.040161 [info ] [MainThread]: Installing dbt-labs/codegen
+[0m10:46:08.433565 [info ] [MainThread]: Installed from version 0.10.0
+[0m10:46:08.433977 [info ] [MainThread]: Up to date!
+[0m10:46:08.434345 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'package', 'label': '9f66b2fe-399d-4e1f-a364-9900ba67afbc', 'property_': 'install', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104593d10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1045e0b10>]}
+[0m10:46:08.434682 [info ] [MainThread]: Installing dbt-labs/dbt_utils
+[0m10:46:08.936254 [info ] [MainThread]: Installed from version 1.1.1
+[0m10:46:08.936521 [info ] [MainThread]: Up to date!
+[0m10:46:08.936840 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'package', 'label': '9f66b2fe-399d-4e1f-a364-9900ba67afbc', 'property_': 'install', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1045ba990>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10408fe50>]}
+[0m10:46:08.937467 [debug] [MainThread]: Command `dbt deps` succeeded at 10:46:08.937400 after 1.61 seconds
+[0m10:46:08.937662 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x100b27510>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x100cff410>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x103fd4990>]}
+[0m10:46:08.937838 [debug] [MainThread]: Flushing usage events
