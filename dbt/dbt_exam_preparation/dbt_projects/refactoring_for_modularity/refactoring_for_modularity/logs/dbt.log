@@ -1303,3 +1303,33 @@ describe table analytics.DBT_AMOLEIRO.customer_orders
 [0m12:17:03.750505 [debug] [MainThread]: Command `dbt compile` succeeded at 12:17:03.750370 after 1.84 seconds
 [0m12:17:03.750930 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1061630d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106163190>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1026cb510>]}
 [0m12:17:03.751313 [debug] [MainThread]: Flushing usage events
+[0m12:36:18.912304 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10614b0d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10615e790>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10613b2d0>]}
+
+
+============================== 12:36:18.914783 | 04288725-dc50-441d-87cc-2f1ad19e1916 ==============================
+[0m12:36:18.914783 [info ] [MainThread]: Running with dbt=1.5.3
+[0m12:36:18.915096 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/Users/andremoleiro/.dbt', 'fail_fast': 'False', 'debug': 'False', 'log_path': '/Users/andremoleiro/Documents/Learning/learning-repo/dbt/dbt_exam_preparation/dbt_projects/refactoring_for_modularity/refactoring_for_modularity/logs', 'warn_error': 'None', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'static_parser': 'True', 'log_format': 'default', 'target_path': 'None', 'send_anonymous_usage_stats': 'True'}
+[0m12:36:19.034050 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '04288725-dc50-441d-87cc-2f1ad19e1916', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106141ed0>]}
+[0m12:36:19.040112 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '04288725-dc50-441d-87cc-2f1ad19e1916', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106176010>]}
+[0m12:36:19.040441 [info ] [MainThread]: Registered adapter: snowflake=1.5.2
+[0m12:36:19.058435 [debug] [MainThread]: checksum: d91324b50612e0c4823cec6657ec795d80c11aba9d5b50e83fb26de63277dec4, vars: {}, profile: , target: , version: 1.5.3
+[0m12:36:19.065113 [error] [MainThread]: Encountered an error:
+Parsing Error
+  Error reading refactoring_for_modularity: staging/jaffle_shop/sources.yml - Runtime Error
+    Syntax error near line 5
+    ------------------------------
+    2  | 
+    3  | sources:
+    4  | - name: jaffle_shop
+    5  |     database: raw
+    6  |     tables:
+    7  |     - name: customers
+    8  |     - name: orders
+    
+    Raw Error:
+    ------------------------------
+    mapping values are not allowed in this context
+      in "<unicode string>", line 5, column 13
+[0m12:36:19.065471 [debug] [MainThread]: Command `cli build` failed at 12:36:19.065415 after 0.16 seconds
+[0m12:36:19.065662 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10616bb10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10613b450>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10281b190>]}
+[0m12:36:19.065845 [debug] [MainThread]: Flushing usage events
