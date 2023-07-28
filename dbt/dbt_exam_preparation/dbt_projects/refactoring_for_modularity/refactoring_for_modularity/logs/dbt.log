@@ -1049,3 +1049,257 @@ There are 1 unused configuration paths:
 [0m12:10:22.597230 [debug] [MainThread]: Command `cli test` succeeded at 12:10:22.597184 after 0.16 seconds
 [0m12:10:22.597400 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x100b4bbd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x100abb310>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x100abb2d0>]}
 [0m12:10:22.597543 [debug] [MainThread]: Flushing usage events
+[0m12:16:19.220044 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10800e850>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108007510>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108007d50>]}
+
+
+============================== 12:16:19.222392 | 74b03960-0259-4d11-9058-300327a785ad ==============================
+[0m12:16:19.222392 [info ] [MainThread]: Running with dbt=1.5.3
+[0m12:16:19.222706 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'fail_fast': 'False', 'log_path': '/Users/andremoleiro/Documents/Learning/learning-repo/dbt/dbt_exam_preparation/dbt_projects/refactoring_for_modularity/refactoring_for_modularity/logs', 'debug': 'False', 'profiles_dir': '/Users/andremoleiro/.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'static_parser': 'True', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'send_anonymous_usage_stats': 'True'}
+[0m12:16:19.336927 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '74b03960-0259-4d11-9058-300327a785ad', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107ff9b50>]}
+[0m12:16:19.343014 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '74b03960-0259-4d11-9058-300327a785ad', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108023dd0>]}
+[0m12:16:19.343345 [info ] [MainThread]: Registered adapter: snowflake=1.5.2
+[0m12:16:19.361178 [debug] [MainThread]: checksum: d91324b50612e0c4823cec6657ec795d80c11aba9d5b50e83fb26de63277dec4, vars: {}, profile: , target: , version: 1.5.3
+[0m12:16:19.383351 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m12:16:19.383643 [debug] [MainThread]: Partial parsing: updated file: refactoring_for_modularity://analyses/compare_queries.sql
+[0m12:16:19.411593 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.refactoring_for_modularity.example
+[0m12:16:19.413970 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '74b03960-0259-4d11-9058-300327a785ad', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107f98e90>]}
+[0m12:16:19.418425 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '74b03960-0259-4d11-9058-300327a785ad', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1088595d0>]}
+[0m12:16:19.418649 [info ] [MainThread]: Found 2 models, 0 tests, 0 snapshots, 1 analysis, 464 macros, 0 operations, 0 seed files, 0 sources, 0 exposures, 0 metrics, 0 groups
+[0m12:16:19.418822 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '74b03960-0259-4d11-9058-300327a785ad', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105d89250>]}
+[0m12:16:19.419550 [info ] [MainThread]: 
+[0m12:16:19.419895 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m12:16:19.420390 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_analytics'
+[0m12:16:19.425889 [debug] [ThreadPool]: Using snowflake connection "list_analytics"
+[0m12:16:19.426069 [debug] [ThreadPool]: On list_analytics: /* {"app": "dbt", "dbt_version": "1.5.3", "profile_name": "refactoring_for_modularity", "target_name": "dev", "connection_name": "list_analytics"} */
+show terse schemas in database analytics
+    limit 10000
+[0m12:16:19.426201 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m12:16:20.182082 [debug] [ThreadPool]: SQL status: SUCCESS 3 in 1.0 seconds
+[0m12:16:20.185612 [debug] [ThreadPool]: On list_analytics: Close
+[0m12:16:20.311177 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_analytics, now list_analytics_DBT_AMOLEIRO)
+[0m12:16:20.319408 [debug] [ThreadPool]: Using snowflake connection "list_analytics_DBT_AMOLEIRO"
+[0m12:16:20.319767 [debug] [ThreadPool]: On list_analytics_DBT_AMOLEIRO: /* {"app": "dbt", "dbt_version": "1.5.3", "profile_name": "refactoring_for_modularity", "target_name": "dev", "connection_name": "list_analytics_DBT_AMOLEIRO"} */
+show terse objects in analytics.DBT_AMOLEIRO
+[0m12:16:20.320046 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m12:16:20.953385 [debug] [ThreadPool]: SQL status: SUCCESS 14 in 1.0 seconds
+[0m12:16:20.957999 [debug] [ThreadPool]: On list_analytics_DBT_AMOLEIRO: Close
+[0m12:16:21.084795 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '74b03960-0259-4d11-9058-300327a785ad', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107699250>]}
+[0m12:16:21.086339 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m12:16:21.086911 [info ] [MainThread]: 
+[0m12:16:21.093697 [debug] [Thread-1 (]: Began running node model.refactoring_for_modularity.customer_orders
+[0m12:16:21.094447 [info ] [Thread-1 (]: 1 of 2 START sql view model DBT_AMOLEIRO.customer_orders ....................... [RUN]
+[0m12:16:21.095431 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_analytics_DBT_AMOLEIRO, now model.refactoring_for_modularity.customer_orders)
+[0m12:16:21.095862 [debug] [Thread-1 (]: Began compiling node model.refactoring_for_modularity.customer_orders
+[0m12:16:21.097840 [debug] [Thread-1 (]: Writing injected SQL for node "model.refactoring_for_modularity.customer_orders"
+[0m12:16:21.098570 [debug] [Thread-1 (]: Timing info for model.refactoring_for_modularity.customer_orders (compile): 12:16:21.096127 => 12:16:21.098388
+[0m12:16:21.098891 [debug] [Thread-1 (]: Began executing node model.refactoring_for_modularity.customer_orders
+[0m12:16:21.123178 [debug] [Thread-1 (]: Writing runtime sql for node "model.refactoring_for_modularity.customer_orders"
+[0m12:16:21.124968 [debug] [Thread-1 (]: Using snowflake connection "model.refactoring_for_modularity.customer_orders"
+[0m12:16:21.125363 [debug] [Thread-1 (]: On model.refactoring_for_modularity.customer_orders: /* {"app": "dbt", "dbt_version": "1.5.3", "profile_name": "refactoring_for_modularity", "target_name": "dev", "node_id": "model.refactoring_for_modularity.customer_orders"} */
+create or replace   view analytics.DBT_AMOLEIRO.customer_orders
+  
+   as (
+    WITH paid_orders as (select Orders.ID as order_id,
+        Orders.USER_ID    as customer_id,
+        Orders.ORDER_DATE AS order_placed_at,
+            Orders.STATUS AS order_status,
+        p.total_amount_paid,
+        p.payment_finalized_date,
+        C.FIRST_NAME    as customer_first_name,
+            C.LAST_NAME as customer_last_name
+    FROM raw.jaffle_shop.orders as Orders
+    left join (select ORDERID as order_id, max(CREATED) as payment_finalized_date, sum(AMOUNT) / 100.0 as total_amount_paid
+from raw.stripe.payment
+where STATUS <> 'fail'
+group by 1) p ON orders.ID = p.order_id
+left join raw.jaffle_shop.customers C on orders.USER_ID = C.ID ),
+
+customer_orders 
+    as (select C.ID as customer_id
+        , min(ORDER_DATE) as first_order_date
+        , max(ORDER_DATE) as most_recent_order_date
+        , count(ORDERS.ID) AS number_of_orders
+    from raw.jaffle_shop.customers C 
+    left join raw.jaffle_shop.orders as Orders
+    on orders.USER_ID = C.ID 
+    group by 1)
+
+select
+    p.*,
+    ROW_NUMBER() OVER (ORDER BY p.order_id) as transaction_seq,
+    ROW_NUMBER() OVER (PARTITION BY customer_id ORDER BY p.order_id) as customer_sales_seq,
+    CASE WHEN c.first_order_date = p.order_placed_at
+    THEN 'new'
+    ELSE 'return' END as nvsr,
+    x.clv_bad as customer_lifetime_value,
+    c.first_order_date as fdos
+    FROM paid_orders p
+    left join customer_orders as c USING (customer_id)
+    LEFT OUTER JOIN 
+    (
+            select
+            p.order_id,
+            sum(t2.total_amount_paid) as clv_bad
+        from paid_orders p
+        left join paid_orders t2 on p.customer_id = t2.customer_id and p.order_id >= t2.order_id
+        group by 1
+        order by p.order_id
+    ) x on x.order_id = p.order_id
+    ORDER BY order_id
+  );
+[0m12:16:21.125675 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m12:16:21.799392 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 1.0 seconds
+[0m12:16:21.813071 [debug] [Thread-1 (]: Timing info for model.refactoring_for_modularity.customer_orders (execute): 12:16:21.099094 => 12:16:21.812957
+[0m12:16:21.813317 [debug] [Thread-1 (]: On model.refactoring_for_modularity.customer_orders: Close
+[0m12:16:21.923788 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '74b03960-0259-4d11-9058-300327a785ad', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10967b010>]}
+[0m12:16:21.924569 [info ] [Thread-1 (]: 1 of 2 OK created sql view model DBT_AMOLEIRO.customer_orders .................. [[32mSUCCESS 1[0m in 0.83s]
+[0m12:16:21.925320 [debug] [Thread-1 (]: Finished running node model.refactoring_for_modularity.customer_orders
+[0m12:16:21.925801 [debug] [Thread-1 (]: Began running node model.refactoring_for_modularity.fct_customer_orders
+[0m12:16:21.926401 [info ] [Thread-1 (]: 2 of 2 START sql view model DBT_AMOLEIRO.fct_customer_orders ................... [RUN]
+[0m12:16:21.927261 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.refactoring_for_modularity.customer_orders, now model.refactoring_for_modularity.fct_customer_orders)
+[0m12:16:21.927621 [debug] [Thread-1 (]: Began compiling node model.refactoring_for_modularity.fct_customer_orders
+[0m12:16:21.929361 [debug] [Thread-1 (]: Writing injected SQL for node "model.refactoring_for_modularity.fct_customer_orders"
+[0m12:16:21.931066 [debug] [Thread-1 (]: Timing info for model.refactoring_for_modularity.fct_customer_orders (compile): 12:16:21.927836 => 12:16:21.930869
+[0m12:16:21.931419 [debug] [Thread-1 (]: Began executing node model.refactoring_for_modularity.fct_customer_orders
+[0m12:16:21.934941 [debug] [Thread-1 (]: Writing runtime sql for node "model.refactoring_for_modularity.fct_customer_orders"
+[0m12:16:21.937265 [debug] [Thread-1 (]: Using snowflake connection "model.refactoring_for_modularity.fct_customer_orders"
+[0m12:16:21.937662 [debug] [Thread-1 (]: On model.refactoring_for_modularity.fct_customer_orders: /* {"app": "dbt", "dbt_version": "1.5.3", "profile_name": "refactoring_for_modularity", "target_name": "dev", "node_id": "model.refactoring_for_modularity.fct_customer_orders"} */
+create or replace   view analytics.DBT_AMOLEIRO.fct_customer_orders
+  
+   as (
+    WITH paid_orders as (select Orders.ID as order_id,
+        Orders.USER_ID    as customer_id,
+        Orders.ORDER_DATE AS order_placed_at,
+            Orders.STATUS AS order_status,
+        p.total_amount_paid,
+        p.payment_finalized_date,
+        C.FIRST_NAME    as customer_first_name,
+            C.LAST_NAME as customer_last_name
+    FROM raw.jaffle_shop.orders as Orders
+    left join (select ORDERID as order_id, max(CREATED) as payment_finalized_date, sum(AMOUNT) / 100.0 as total_amount_paid
+from raw.stripe.payment
+where STATUS <> 'fail'
+group by 1) p ON orders.ID = p.order_id
+left join raw.jaffle_shop.customers C on orders.USER_ID = C.ID ),
+
+customer_orders 
+    as (select C.ID as customer_id
+        , min(ORDER_DATE) as first_order_date
+        , max(ORDER_DATE) as most_recent_order_date
+        , count(ORDERS.ID) AS number_of_orders
+    from raw.jaffle_shop.customers C 
+    left join raw.jaffle_shop.orders as Orders
+    on orders.USER_ID = C.ID 
+    group by 1)
+
+select
+    p.*,
+    ROW_NUMBER() OVER (ORDER BY p.order_id) as transaction_seq,
+    ROW_NUMBER() OVER (PARTITION BY customer_id ORDER BY p.order_id) as customer_sales_seq,
+    CASE WHEN c.first_order_date = p.order_placed_at
+    THEN 'new'
+    ELSE 'return' END as nvsr,
+    x.clv_bad as customer_lifetime_value,
+    c.first_order_date as fdos
+    FROM paid_orders p
+    left join customer_orders as c USING (customer_id)
+    LEFT OUTER JOIN 
+    (
+            select
+            p.order_id,
+            sum(t2.total_amount_paid) as clv_bad
+        from paid_orders p
+        left join paid_orders t2 on p.customer_id = t2.customer_id and p.order_id >= t2.order_id
+        group by 1
+        order by p.order_id
+    ) x on x.order_id = p.order_id
+    ORDER BY order_id
+  );
+[0m12:16:21.938043 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m12:16:22.825680 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 1.0 seconds
+[0m12:16:22.832336 [debug] [Thread-1 (]: Timing info for model.refactoring_for_modularity.fct_customer_orders (execute): 12:16:21.931631 => 12:16:22.832143
+[0m12:16:22.832724 [debug] [Thread-1 (]: On model.refactoring_for_modularity.fct_customer_orders: Close
+[0m12:16:22.943381 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '74b03960-0259-4d11-9058-300327a785ad', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109d07fd0>]}
+[0m12:16:22.944116 [info ] [Thread-1 (]: 2 of 2 OK created sql view model DBT_AMOLEIRO.fct_customer_orders .............. [[32mSUCCESS 1[0m in 1.02s]
+[0m12:16:22.944837 [debug] [Thread-1 (]: Finished running node model.refactoring_for_modularity.fct_customer_orders
+[0m12:16:22.946518 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m12:16:22.946784 [debug] [MainThread]: Connection 'model.refactoring_for_modularity.fct_customer_orders' was properly closed.
+[0m12:16:22.947067 [info ] [MainThread]: 
+[0m12:16:22.947406 [info ] [MainThread]: Finished running 2 view models in 0 hours 0 minutes and 3.53 seconds (3.53s).
+[0m12:16:22.948122 [debug] [MainThread]: Command end result
+[0m12:16:22.955919 [info ] [MainThread]: 
+[0m12:16:22.956266 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m12:16:22.956519 [info ] [MainThread]: 
+[0m12:16:22.956788 [info ] [MainThread]: Done. PASS=2 WARN=0 ERROR=0 SKIP=0 TOTAL=2
+[0m12:16:22.957299 [debug] [MainThread]: Command `dbt run` succeeded at 12:16:22.957227 after 3.75 seconds
+[0m12:16:22.957586 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1047634d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10458b510>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10466c310>]}
+[0m12:16:22.957850 [debug] [MainThread]: Flushing usage events
+[0m12:17:01.920307 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106143290>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106152350>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106153a10>]}
+
+
+============================== 12:17:01.922740 | 37c2af2a-0354-464e-a586-8d46bc1ee3b4 ==============================
+[0m12:17:01.922740 [info ] [MainThread]: Running with dbt=1.5.3
+[0m12:17:01.923045 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'fail_fast': 'False', 'log_path': '/Users/andremoleiro/Documents/Learning/learning-repo/dbt/dbt_exam_preparation/dbt_projects/refactoring_for_modularity/refactoring_for_modularity/logs', 'version_check': 'True', 'profiles_dir': '/Users/andremoleiro/.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'introspect': 'True', 'log_format': 'default', 'target_path': 'None', 'send_anonymous_usage_stats': 'True'}
+[0m12:17:02.039394 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '37c2af2a-0354-464e-a586-8d46bc1ee3b4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10614fd10>]}
+[0m12:17:02.045483 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '37c2af2a-0354-464e-a586-8d46bc1ee3b4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10616c4d0>]}
+[0m12:17:02.045842 [info ] [MainThread]: Registered adapter: snowflake=1.5.2
+[0m12:17:02.065301 [debug] [MainThread]: checksum: d91324b50612e0c4823cec6657ec795d80c11aba9d5b50e83fb26de63277dec4, vars: {}, profile: , target: , version: 1.5.3
+[0m12:17:02.089728 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m12:17:02.089932 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m12:17:02.090177 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.refactoring_for_modularity.example
+[0m12:17:02.093013 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '37c2af2a-0354-464e-a586-8d46bc1ee3b4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1068dec50>]}
+[0m12:17:02.096747 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '37c2af2a-0354-464e-a586-8d46bc1ee3b4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106934dd0>]}
+[0m12:17:02.096955 [info ] [MainThread]: Found 2 models, 0 tests, 0 snapshots, 1 analysis, 464 macros, 0 operations, 0 seed files, 0 sources, 0 exposures, 0 metrics, 0 groups
+[0m12:17:02.097127 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '37c2af2a-0354-464e-a586-8d46bc1ee3b4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x103ec9250>]}
+[0m12:17:02.097815 [info ] [MainThread]: 
+[0m12:17:02.098178 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m12:17:02.098657 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_analytics_DBT_AMOLEIRO'
+[0m12:17:02.104701 [debug] [ThreadPool]: Using snowflake connection "list_analytics_DBT_AMOLEIRO"
+[0m12:17:02.104886 [debug] [ThreadPool]: On list_analytics_DBT_AMOLEIRO: /* {"app": "dbt", "dbt_version": "1.5.3", "profile_name": "refactoring_for_modularity", "target_name": "dev", "connection_name": "list_analytics_DBT_AMOLEIRO"} */
+show terse objects in analytics.DBT_AMOLEIRO
+[0m12:17:02.105008 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m12:17:02.889339 [debug] [ThreadPool]: SQL status: SUCCESS 14 in 1.0 seconds
+[0m12:17:02.893447 [debug] [ThreadPool]: On list_analytics_DBT_AMOLEIRO: Close
+[0m12:17:03.012434 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '37c2af2a-0354-464e-a586-8d46bc1ee3b4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106903a10>]}
+[0m12:17:03.013659 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m12:17:03.014124 [info ] [MainThread]: 
+[0m12:17:03.019493 [debug] [Thread-1 (]: Began running node model.refactoring_for_modularity.customer_orders
+[0m12:17:03.020274 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_analytics_DBT_AMOLEIRO, now model.refactoring_for_modularity.customer_orders)
+[0m12:17:03.020650 [debug] [Thread-1 (]: Began compiling node model.refactoring_for_modularity.customer_orders
+[0m12:17:03.022843 [debug] [Thread-1 (]: Writing injected SQL for node "model.refactoring_for_modularity.customer_orders"
+[0m12:17:03.023698 [debug] [Thread-1 (]: Timing info for model.refactoring_for_modularity.customer_orders (compile): 12:17:03.020884 => 12:17:03.023471
+[0m12:17:03.024053 [debug] [Thread-1 (]: Began executing node model.refactoring_for_modularity.customer_orders
+[0m12:17:03.024438 [debug] [Thread-1 (]: Timing info for model.refactoring_for_modularity.customer_orders (execute): 12:17:03.024266 => 12:17:03.024281
+[0m12:17:03.025314 [debug] [Thread-1 (]: Finished running node model.refactoring_for_modularity.customer_orders
+[0m12:17:03.025617 [debug] [Thread-1 (]: Began running node model.refactoring_for_modularity.fct_customer_orders
+[0m12:17:03.026223 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.refactoring_for_modularity.customer_orders, now model.refactoring_for_modularity.fct_customer_orders)
+[0m12:17:03.026559 [debug] [Thread-1 (]: Began compiling node model.refactoring_for_modularity.fct_customer_orders
+[0m12:17:03.028824 [debug] [Thread-1 (]: Writing injected SQL for node "model.refactoring_for_modularity.fct_customer_orders"
+[0m12:17:03.029348 [debug] [Thread-1 (]: Timing info for model.refactoring_for_modularity.fct_customer_orders (compile): 12:17:03.026752 => 12:17:03.029203
+[0m12:17:03.029611 [debug] [Thread-1 (]: Began executing node model.refactoring_for_modularity.fct_customer_orders
+[0m12:17:03.029932 [debug] [Thread-1 (]: Timing info for model.refactoring_for_modularity.fct_customer_orders (execute): 12:17:03.029783 => 12:17:03.029790
+[0m12:17:03.030586 [debug] [Thread-1 (]: Finished running node model.refactoring_for_modularity.fct_customer_orders
+[0m12:17:03.031052 [debug] [Thread-1 (]: Began running node analysis.refactoring_for_modularity.compare_queries
+[0m12:17:03.031609 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.refactoring_for_modularity.fct_customer_orders, now analysis.refactoring_for_modularity.compare_queries)
+[0m12:17:03.031862 [debug] [Thread-1 (]: Began compiling node analysis.refactoring_for_modularity.compare_queries
+[0m12:17:03.049189 [debug] [Thread-1 (]: Using snowflake connection "analysis.refactoring_for_modularity.compare_queries"
+[0m12:17:03.049458 [debug] [Thread-1 (]: On analysis.refactoring_for_modularity.compare_queries: /* {"app": "dbt", "dbt_version": "1.5.3", "profile_name": "refactoring_for_modularity", "target_name": "dev", "node_id": "analysis.refactoring_for_modularity.compare_queries"} */
+describe table analytics.DBT_AMOLEIRO.customer_orders
+[0m12:17:03.049658 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m12:17:03.600398 [debug] [Thread-1 (]: SQL status: SUCCESS 13 in 1.0 seconds
+[0m12:17:03.615755 [debug] [Thread-1 (]: Writing injected SQL for node "analysis.refactoring_for_modularity.compare_queries"
+[0m12:17:03.616787 [debug] [Thread-1 (]: Timing info for analysis.refactoring_for_modularity.compare_queries (compile): 12:17:03.032028 => 12:17:03.616573
+[0m12:17:03.617133 [debug] [Thread-1 (]: Began executing node analysis.refactoring_for_modularity.compare_queries
+[0m12:17:03.617515 [debug] [Thread-1 (]: Timing info for analysis.refactoring_for_modularity.compare_queries (execute): 12:17:03.617350 => 12:17:03.617366
+[0m12:17:03.617843 [debug] [Thread-1 (]: On analysis.refactoring_for_modularity.compare_queries: Close
+[0m12:17:03.734303 [debug] [Thread-1 (]: Finished running node analysis.refactoring_for_modularity.compare_queries
+[0m12:17:03.736095 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m12:17:03.736525 [debug] [MainThread]: Connection 'analysis.refactoring_for_modularity.compare_queries' was properly closed.
+[0m12:17:03.737781 [debug] [MainThread]: Command end result
+[0m12:17:03.750505 [debug] [MainThread]: Command `dbt compile` succeeded at 12:17:03.750370 after 1.84 seconds
+[0m12:17:03.750930 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1061630d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106163190>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1026cb510>]}
+[0m12:17:03.751313 [debug] [MainThread]: Flushing usage events

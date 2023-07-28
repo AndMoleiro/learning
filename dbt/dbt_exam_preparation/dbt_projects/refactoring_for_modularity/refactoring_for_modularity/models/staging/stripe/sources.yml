@@ -1,0 +1,8 @@
+version: 1
+
+sources:
+  - name: stripe
+    - database: raw
+    - tables:
+      - name: payments
+
