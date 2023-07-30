@@ -1,4 +1,8 @@
-select 
+
+  create or replace   view analytics.DBT_AMOLEIRO.fct_customer_orders
+  
+   as (
+    select 
     orders.id as order_id,
     orders.user_id as customer_id,
     last_name as surname,
@@ -39,7 +43,7 @@ join (
       select 
         row_number() over (partition by user_id order by order_date, id) as user_order_seq,
         *
-      from raw.jaffle_shop.orders
+      from raw.jaffle_shop.orders as orders
     ) a
 
     join ( 
@@ -64,3 +68,5 @@ left outer join raw.stripe.payment payments
 on orders.id = payments.orderid
 
 where payments.status != 'fail'
+  );
+

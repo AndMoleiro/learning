@@ -39,7 +39,7 @@ join (
       select 
         row_number() over (partition by user_id order by order_date, id) as user_order_seq,
         *
-      from raw.jaffle_shop.orders
+      from raw.jaffle_shop.orders as orders
     ) a
 
     join ( 
