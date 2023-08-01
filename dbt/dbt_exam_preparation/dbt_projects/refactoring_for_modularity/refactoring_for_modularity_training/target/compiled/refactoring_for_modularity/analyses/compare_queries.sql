@@ -1,266 +1,131 @@
- 
+with
+    a as (
 
-  
+        select
 
+            "ORDER_ID",
 
+            "CUSTOMER_ID",
 
+            "SURNAME",
 
+            "GIVENNAME",
 
+            "FIRST_ORDER_DATE",
 
-
-
-
-
-
-
-
-
-with a as (
-
-    
-select
-
-  
-
-   
-    "CUSTOMER_ID" 
-    
-      , 
-     
-   
-    "ORDER_ID" 
-    
-      , 
-     
-   
-    "ORDER_PLACED_AT" 
-    
-      , 
-     
-   
-    "ORDER_STATUS" 
-    
-      , 
-     
-   
-    "TOTAL_AMOUNT_PAID" 
-    
-      , 
-     
-   
-    "PAYMENT_FINALIZED_DATE" 
-    
-      , 
-     
-   
-    "CUSTOMER_FIRST_NAME" 
-    
-      , 
-     
-   
-    "CUSTOMER_LAST_NAME" 
-    
-      , 
-     
-   
-    "TRANSACTION_SEQ" 
-    
-      , 
-     
-   
-    "CUSTOMER_SALES_SEQ" 
-    
-      , 
-     
-   
-    "NVSR" 
-    
-      , 
-     
-   
-    "CUSTOMER_LIFETIME_VALUE" 
-    
-      , 
-     
-   
-    "FDOS" 
-     
-  
-
-
-
-from analytics.DBT_AMOLEIRO.customer_orders
-
-
-),
-
-b as (
-
-    
-select
-
-  
-
-   
-    "CUSTOMER_ID" 
-    
-      , 
-     
-   
-    "ORDER_ID" 
-    
-      , 
-     
-   
-    "ORDER_PLACED_AT" 
-    
-      , 
-     
-   
-    "ORDER_STATUS" 
-    
-      , 
-     
-   
-    "TOTAL_AMOUNT_PAID" 
-    
-      , 
-     
-   
-    "PAYMENT_FINALIZED_DATE" 
-    
-      , 
-     
-   
-    "CUSTOMER_FIRST_NAME" 
-    
-      , 
-     
-   
-    "CUSTOMER_LAST_NAME" 
-    
-      , 
-     
-   
-    "TRANSACTION_SEQ" 
-    
-      , 
-     
-   
-    "CUSTOMER_SALES_SEQ" 
-    
-      , 
-     
-   
-    "NVSR" 
-    
-      , 
-     
-   
-    "CUSTOMER_LIFETIME_VALUE" 
-    
-      , 
-     
-   
-    "FDOS" 
-     
-  
+            "ORDER_COUNT",
 
+            "TOTAL_LIFETIME_VALUE",
 
+            "ORDER_VALUE_DOLLARS",
 
-from analytics.DBT_AMOLEIRO.fct_customer_orders
+            "ORDER_STATUS",
 
+            "PAYMENT_STATUS"
 
-),
+        from analytics.dbt_amoleiro.customer_orders
 
-a_intersect_b as (
+    ),
 
-    select * from a
-    
+    b as (
 
-    intersect
+        select
 
+            "ORDER_ID",
 
-    select * from b
+            "CUSTOMER_ID",
 
-),
+            "SURNAME",
 
-a_except_b as (
+            "GIVENNAME",
 
-    select * from a
-    
+            "FIRST_ORDER_DATE",
 
-    except
+            "ORDER_COUNT",
 
+            "TOTAL_LIFETIME_VALUE",
 
-    select * from b
+            "ORDER_VALUE_DOLLARS",
 
-),
+            "ORDER_STATUS",
 
-b_except_a as (
+            "PAYMENT_STATUS"
 
-    select * from b
-    
+        from analytics.dbt_amoleiro.fct_customer_orders
 
-    except
+    ),
 
+    a_intersect_b as (
 
-    select * from a
+        select *
+        from a
 
-),
+        intersect
 
-all_records as (
+        select *
+        from b
 
-    select
-        *,
-        true as in_a,
-        true as in_b
-    from a_intersect_b
+    ),
 
-    union all
+    a_except_b as (
 
-    select
-        *,
-        true as in_a,
-        false as in_b
-    from a_except_b
+        select *
+        from a
 
-    union all
+        except
 
-    select
-        *,
-        false as in_a,
-        true as in_b
-    from b_except_a
+        select *
+        from b
 
-),
+    ),
 
-summary_stats as (
+    b_except_a as (
 
-    select
+        select *
+        from b
 
-        in_a,
-        in_b,
-        count(*) as count
+        except
 
-    from all_records
-    group by 1, 2
+        select *
+        from a
 
-),
+    ),
 
-final as (
+    all_records as (
 
-    select
+        select *, true as in_a, true as in_b
+        from a_intersect_b
 
-        *,
-        round(100.0 * count / sum(count) over (), 2) as percent_of_total
+        union all
 
-    from summary_stats
-    order by in_a desc, in_b desc
+        select *, true as in_a, false as in_b
+        from a_except_b
 
-)
+        union all
 
-select * from final
+        select *, false as in_a, true as in_b
+        from b_except_a
 
+    )
 
+    select * from all_records
+    where not (in_a and in_b)
+    order by order_id, in_a desc, in_b desc
 
+    summary_stats as (
+
+        select in_a, in_b, count(*) as count from all_records group by 1, 2
+
+    ),
+
+    final as (
+
+        select *, round(100.0 * count / sum(count) over (), 2) as percent_of_total
+
+        from summary_stats
+        order by in_a desc, in_b desc
+
+    )
+
+select *
+from final
