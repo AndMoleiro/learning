@@ -1,7 +1,11 @@
-with
-    paid_orders as (select * from {{ ref("int_paid_orders") }}),
 
-    customers as (select * from {{ ref("stg_jaffle_shop__customers") }}),
+  create or replace   view analytics.DBT_AMOLEIRO.fct_customer_orders
+  
+   as (
+    with
+    paid_orders as (select * from analytics.DBT_AMOLEIRO.int_paid_orders),
+
+    customers as (select * from analytics.DBT_AMOLEIRO.stg_jaffle_shop__customers),
 
     paid_orders_with_customer_info as (
         select
@@ -31,3 +35,5 @@ with
 
 select *
 from final
+  );
+
