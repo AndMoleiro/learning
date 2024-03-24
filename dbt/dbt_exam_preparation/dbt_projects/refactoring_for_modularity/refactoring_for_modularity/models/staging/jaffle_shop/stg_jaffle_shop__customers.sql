@@ -10,4 +10,4 @@ with
     )
 
 select *
-from transform
+from transform 

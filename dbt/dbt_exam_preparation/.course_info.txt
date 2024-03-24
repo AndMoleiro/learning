@@ -1,4 +1,4 @@
-Course name: Official DBT learning path
+ Course name: Official DBT learning path
 
 Course URL: https://www.getdbt.com/assets/uploads/dbt_certificate_study_guide.pdf
 
