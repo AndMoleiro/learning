@@ -32,7 +32,7 @@ def stock_market():
         task_id="get_stock_prices",
         python_callable=_get_stock_prices,
         op_kwargs={
-            "url": 
+            "url":
             "{{ task_instance.xcom_pull(task_ids='is_api_available') }}",
             "symbol": SYMBOL,
             "api_key": API_KEY,
@@ -43,7 +43,7 @@ def stock_market():
         task_id='store_prices',
         python_callable=_store_prices,
         op_kwargs={
-            "stock": 
+            "stock":
             "{{ task_instance.xcom_pull(task_ids='get_stock_prices') }}"
         }
     )

@@ -12,7 +12,7 @@
 # Import the SparkSession module
 from pyspark.sql import SparkSession
 from pyspark import SparkContext
-from pyspark.sql.functions import explode, arrays_zip, from_unixtime
+from pyspark.sql.functions import explode, col
 from pyspark.sql.types import DateType
 
 import os
@@ -38,17 +38,21 @@ if __name__ == '__main__':
         df = spark.read.option("header", "false") \
             .json(f"s3a://{os.getenv('SPARK_APPLICATION_ARGS')}/prices.json")
 
-        # Explode the necessary arrays
-        df_exploded = df.select("timestamp", explode("indicators.quote").alias("quote")) \
-            .select("timestamp", "quote.*")
+        # Explode the dates (keys) into rows
+        df_exploded = df.select(explode(col("*")).alias("date", "values"))
 
-        # Zip the arrays
-        df_zipped = df_exploded.select(arrays_zip("timestamp", "close", "high", "low", "open", "volume").alias("zipped"))
-        df_zipped = df_zipped.select(explode("zipped")).select("col.timestamp", "col.close", "col.high", "col.low", "col.open", "col.volume")
-        df_zipped = df_zipped.withColumn('date', from_unixtime('timestamp').cast(DateType()))
+        # Select and rename columns to match the desired structure
+        df_transformed = df_exploded.select(
+            col("date"),
+            col("values.`1. open`").alias("open"),
+            col("values.`2. high`").alias("high"),
+            col("values.`3. low`").alias("low"),
+            col("values.`4. close`").alias("close"),
+            col("values.`5. volume`").alias("volume")
+        )
 
         # Store in Minio
-        df_zipped.write \
+        df_transformed.write \
             .mode("overwrite") \
             .option("header", "true") \
             .option("delimiter", ",") \
